@@ -1,0 +1,221 @@
+/* * grid.css
+ * Classic dense layout configuration
+ */
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Main layout grid structure
+   Row 1: breadcrumbs (full width)
+   Row 2: [empty col1] [title+date col2] [logo col3]
+   Row 3: [TOC col1]       [nav-top col2]         — cycle split
+   Row 4: [review col1]    [HR+intro+body col2]    — cycle split
+   Row 5: [copyright col1] [author+nav-bottom col2]— cycle split
+   (lyric pages use grid-sidebar-left + grid-content-body in row 3 only)
+*/
+.layout-grid {
+    display: grid;
+    grid-template-columns: 270px minmax(0, 1fr) 110px;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Breadcrumb - full width, row 1 */
+.grid-breadcrumbs {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Logo is now inside .grid-content-header (no separate .grid-logo cell) */
+
+/* Left sidebar (lyric pages) - row 3 col 1 */
+.grid-sidebar-left {
+    grid-column: 1 / 2;
+    grid-row: 3;
+    padding-right: 20px;
+}
+
+/* Cycle page sidebar — split into 3 rows */
+.grid-sidebar-toc        { grid-column: 1/2; grid-row: 3; padding-right: 20px; padding-top: 14px; }
+.grid-sidebar-review     { grid-column: 1/2; grid-row: 4; padding-right: 20px;
+                           font-family: "Times New Roman", serif; font-size: 16px;
+                           font-style: italic; font-weight: bold; }
+.grid-sidebar-copyright  { grid-column: 1/2; grid-row: 5; padding-right: 20px; padding-left: 10px; align-self: end; }
+
+/* Title + date + logo header area — row 2, spans content+logo columns */
+.grid-content-header {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    padding: 13px 0 0;
+    width: 650px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.header-logo {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+/* Body content — used by lyric pages (single block) */
+.grid-content-body {
+    grid-column: 2 / 3;
+    grid-row: 3;
+    padding: 0 10px;
+}
+
+/* Cycle page body — split into 3 rows */
+.grid-content-nav    { grid-column: 2/3; grid-row: 3; padding: 14px 0 0; width: 650px; box-sizing: border-box; }
+.grid-content-main   { grid-column: 2/3; grid-row: 4; padding: 0; width: 650px; box-sizing: border-box; }
+.grid-content-footer { grid-column: 2/3; grid-row: 5; padding: 0; width: 650px; box-sizing: border-box; }
+
+/* Remove browser default bottom margin from last element before the separator */
+.txt_intro > *:last-child,
+.txt_body > *:last-child {
+    margin-bottom: 0;
+}
+
+/* List container */
+.content-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+/* Individual list rows */
+.list-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1px 0;
+}
+
+/* List link - bold to match old site */
+.list-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Date tag styling */
+.list-date {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 15px;
+}
+
+/* Navigation bars - matches .navigate from style_base.css */
+.navigation-top, .navigation-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Horizontal separators — no color override, let browser render naturally (light on dark bg, dark on light bg) */
+.separator {
+    margin: 20px 0;
+}
+/* Tight margins for separator inside nav (between nav-top and intro) */
+.grid-content-nav .separator    { margin-top: 4px; margin-bottom: 8px; }
+/* Tight margins for separator inside footer (between author and nav-bottom) */
+.grid-content-footer .separator { margin-top: 10px; margin-bottom: 6px; }
+
+/* Author credit - matches .txt_author from style_base.css */
+.author-block {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* ── Sidebar elements ─────────────────────────────── */
+/* Font is set on .grid-sidebar-review container; these rules handle spacing only */
+.links {
+    margin-bottom: 8px;
+}
+
+.review {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+/* ── Navigation elements - match .navigate from style_base.css ── */
+.nav-edge {
+    flex: 1;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.nav-edge:last-child {
+    text-align: right;
+}
+
+.txt-name-title {
+    flex: 2;
+    text-align: center;
+    color: #FF0000;
+    font-family: Comic Sans MS;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ── Content layout helpers ──────────────────────── */
+/* cycle_name, date, txt_intro, txt_body typography handled by style_base.css */
+.cycle_name {
+    margin-bottom: 4px;
+}
+
+/* txt_intro: italic/size override; font-family comes from style_*.css (Times NR for cycles) */
+.txt_intro {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: normal;
+    color: inherit;
+}
+.txt_intro table {
+    width: 100%;
+}
+.txt_intro td {
+    padding: 4px 5px;
+}
+
+/* content.html: no italic, inherit body font (also covers HE Comic Sans override) */
+.content-page .txt_intro {
+    font-style: normal;
+    font-family: inherit;
+}
+
+/* page_other single pages: Verdana italic (different from cycle Times NR) */
+.other-page .txt_intro {
+    font-family: Verdana;
+}
+
+.content-width {
+    width: 100%;
+}
+
+/* ── Review page ──────────────────────────────────── */
+.review-entry {
+    margin-bottom: 20px;
+    width: 100%;
+}

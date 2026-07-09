@@ -1,0 +1,115 @@
+body
+{
+	color: #000021;
+	background: url(../jpg/fone.jpg);
+	background-color: #FCF2E6;
+	background-image: url(../jpg/fone.jpg);
+	background-attachment: fixed;
+	font-family: Tahoma,Verdana;
+}
+
+a:link
+{
+	color: #151B54;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #6C006C;
+	text-decoration: none;
+}
+a:active
+{
+	color: #FF0000;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #0000FF;
+	text-decoration: none;
+}
+
+.cycle_name
+{
+	font-family: Comic Sans MS;
+	font-size: 24px;
+}
+
+.date
+{
+	font-family: Comic Sans MS;
+	font-size: 18px;
+}
+
+.txt_name
+{
+	color: #FF0000;
+	font-family: Comic Sans MS;
+	font-size: 22px;
+}
+
+.navigate
+{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.bread_crumb
+{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.content
+{
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.review
+{
+	font-family: Times New Roman;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.txt_body
+{
+	font-size: 16px;
+	font-style: italic;
+/*	font-weight: bold;
+*/
+}
+
+.txt_intro
+{
+	color: #000023;
+	font-family: Times New Roman;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.txt_author
+{
+	font-size: 16px;
+	font-style: italic;
+/*	font-weight: bold;
+*/
+}
+
+.copyright
+{
+	color: #FF0000;
+	font-size: 12px;
+}
+
+.search_google
+{
+	background-image: url('../gif/google.gif');
+	background-size: 50px 20px;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,194 @@
+body
+{
+	background-color: #101010;
+	margin-left: 36;
+	margin-top: 0;
+	font-family: Tahoma,Verdana;
+}
+
+a:link
+{
+	color: #00ffff;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #ffff48;
+	text-decoration: none;
+}
+a:active
+{
+	color: red;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #15ff8a;
+	text-decoration: none;
+}
+
+.q1
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #ff0000;
+	padding-left: 38px;
+	position: relative;
+}
+
+.q1_E
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #ff0000;
+	padding-left: 38px;
+	position: relative;
+}
+
+.content_Link
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	position: relative;
+	vertical-align: bottom;
+}
+
+.link_EN
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #00ffff;
+	position: relative;
+	padding-top: 10px;
+	vertical-align: bottom;
+}
+
+.link_HE
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #00ff00;
+	position: relative;
+	padding-top: 10px;
+	vertical-align: bottom;
+}
+
+.link_More
+{
+	font-size: 14px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	position: relative;
+	padding-top: 50px;
+}
+
+.search_google
+{
+	background-image: url('../gif/google.gif');
+	background-size: 50px 20px;
+	background-repeat: no-repeat;
+}
+
+/*----- Hebrew Support -- */
+
+.q1_H
+{
+	font-size: 18px;
+	font-family: David Transparent,Tahoma,Verdana;
+	font-style: italic;
+	color: #ff0000;
+	padding-right: 30px;
+	position: relative;
+	text-align: right;
+}
+
+.content_Link_H
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	position: relative;
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.link_EN_H
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #00ffff;
+	position: relative;
+	padding-top: 10px;
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.link_HE_H
+{
+	font-size: 18px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	color: #00ff00;
+	position: relative;
+	padding-top: 10px;
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.link_More_H
+{
+	font-size: 14px;
+	font-family: Tahoma,Verdana;
+	font-style: italic;
+	position: relative;
+	padding-top: 50px;
+	text-align: right;
+}
+
+.search_google_H
+{
+	background-image: url('../gif/google.gif');
+	background-size: 50px 20px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+/*----- Image Support -- */
+
+.char_in
+{
+	font-family: Matura MT Script Capitals;
+	font-size: 30px;
+	font-weight: bold;
+	color: #FE5800;
+}
+
+.char_out
+{
+	font-family: Matura MT Script Capitals;
+	font-size: 30px;
+	font-weight: bold;
+	color: #CD9C1F; /*C9893C*/
+}
+
+.char_HE_in
+{
+	font-family: Matura MT Script Capitals;
+	font-size: 28px;
+	font-weight: bold;
+	color: #FE5800 important;
+}
+
+.char_HE_out
+{
+	font-family: Matura MT Script Capitals;
+	font-size: 28px;
+	font-weight: bold;
+	color: #CD9C1F important; /*C9893C*/
+}
