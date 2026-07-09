@@ -56,7 +56,7 @@ isClean = true;
 
 function open_url(id) {
 	url = document.getElementById(id).value;
-	url = "http://www.google.com/webhp?hl=ru#sclient=psy-ab&hl=ru&site=webhp&source=hp&q=" + url + "+site:senson.somee.com&btnK=Google+Search"
+	url = "http://www.google.com/webhp?hl=ru#sclient=psy-ab&hl=ru&site=webhp&source=hp&q=" + url + "+site:sensonx.github.io&btnK=Google+Search"
 	window.open(url);
 }
 
@@ -209,5 +209,8 @@ function clean(id) {
 </table>
 
 </center>
+
+<button id="topBtn" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('topBtn').style.display=window.scrollY>200?'block':'none';});</script>
 </body>
 </html>

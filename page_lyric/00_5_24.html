@@ -20,7 +20,7 @@
     <meta name="publisher" content="Семен Кричкер, Семён Кричкер, S-on Kritchker, S-on Krichker" />
     <meta name="rating" content="general" />
 </head>
-<body>
+<body oncopy="window.alert('Copyright &amp;copy; 1995-2026 S-on Kritchker (Кричкер Семён - авторскиe материалы)'); return false;" oncontextmenu="window.alert('Copyright &amp;copy; 1995-2026 S-on Kritchker (Кричкер Семён - авторскиe материалы)'); return false;">
 
     <div class="layout-grid">
         <div class="grid-breadcrumbs"><a href="../index.html">Home</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../page_other/content.html">Оглавление</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="../page_cycle/on_hd.html">Цикл: "На жестком диске"</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;&#34;Контур&#34;</div>
@@ -51,6 +51,10 @@
         </div>
 
         <div class="grid-sidebar-copyright">
+            <form class="search-form" onsubmit="window.open('https://www.google.com/search?q='+encodeURIComponent(this.q.value)+'+site:sensonx.github.io','_blank');return false;">
+                <input name="q" type="text" class="search-input" placeholder="&#1055;&#1086;&#1080;&#1089;&#1082;..." autocomplete="off">
+                <button type="submit" class="search-btn">&#128269;</button>
+            </form>
             <div class="copyright">Copyright &copy; 1995-2026 <a href='mailto:mbox4s@gmail.com' title='S-on Kritchker'>S-on Kritchker</a></div>
         </div>
 
@@ -114,5 +118,8 @@
         </div>
     </div>
 
+
+<button id="topBtn" title="&#1041;&#1077;&#1088;&#1085;&#1091;&#1090;&#1100;&#1089;&#1103; &#1074;&#1074;&#1077;&#1088;&#1093;" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+<script>window.addEventListener('scroll',function(){document.getElementById('topBtn').style.display=window.scrollY>200?'block':'none';});</script>
 </body>
 </html>
