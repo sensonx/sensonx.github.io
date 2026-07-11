@@ -83,6 +83,7 @@ a:hover
 	font-size: 14px;
 	font-family: Tahoma,Verdana;
 	font-style: italic;
+	color: #00ffff;
 	position: relative;
 	padding-top: 50px;
 }
@@ -146,6 +147,7 @@ a:hover
 	font-size: 14px;
 	font-family: Tahoma,Verdana;
 	font-style: italic;
+	color: #00ffff;
 	position: relative;
 	padding-top: 50px;
 	text-align: right;
