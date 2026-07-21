@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/css/style_base.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <title>404 — Page Not Found | sensonx.github.io</title>
+    <meta name="robots" content="noindex" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZJ8X004LV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XZJ8X004LV');
+    </script>
+    <style>
+      .page-404 {
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 20px;
+        text-align: center;
+      }
+      .page-404 h1 { font-size: 72px; margin: 0 0 10px; color: #c00; }
+      .page-404 .msg-ru { font-size: 18px; margin: 10px 0 4px; }
+      .page-404 .msg-en { font-size: 15px; color: #555; margin: 4px 0; }
+      .page-404 .msg-he { font-size: 15px; color: #555; margin: 4px 0; direction: rtl; }
+      .page-404 .home-link { display: inline-block; margin-top: 30px; font-size: 16px; }
+      .page-404 .logo { margin-bottom: 20px; }
+      .copyright { text-align: center; margin-top: 40px; font-size: 12px; color: #888; }
+    </style>
+</head>
+<body oncopy="window.alert('Copyright &copy; 1995-2026 S-on Kritchker (Кричкер Семён - авторскиe материалы)'); return false;" oncontextmenu="window.alert('Copyright &copy; 1995-2026 S-on Kritchker (Кричкер Семён - авторскиe материалы)'); return false;">
+
+  <div class="page-404">
+    <div class="logo">
+      <a href="/index.html"><img src="/jpg/basad1.jpg" border="0" alt="Home" /></a><br/>
+      <a href="/index.html"><img src="/gif/logo.gif" border="0" alt="Home" /></a>
+    </div>
+    <h1>404</h1>
+    <div class="msg-ru">Страница не найдена</div>
+    <div class="msg-en">Page not found</div>
+    <div class="msg-he">הדף לא נמצא</div>
+    <a class="home-link" href="/index.html">
+      <img src="/gif/start.gif" border="0" alt="Home" />&nbsp;&nbsp;На главную
+    </a>
+  </div>
+
+  <div class="copyright">
+    Copyright &copy; 1995-2026 <a href="mailto:mbox4s@gmail.com" title="S-on Kritchker">S-on Kritchker</a>
+  </div>
+
+  <button id="topBtn" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+  <script>window.addEventListener('scroll',function(){document.getElementById('topBtn').style.display=window.scrollY>200?'block':'none';});</script>
+</body>
+</html>
