@@ -199,6 +199,11 @@ body {
     padding: 4px 5px;
 }
 
+/* Poem body: prevent casual drag-copy */
+.txt_body {
+    user-select: none;
+}
+
 /* content.html: no italic, inherit body font (also covers HE Comic Sans override) */
 .content-page .txt_intro {
     font-style: normal;
@@ -243,3 +248,51 @@ body {
 .search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 2px; }
 .search-input { width: 150px; font-size: 11px; padding: 2px 4px; border: 1px solid #999; }
 .search-btn { font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; background: #f0f0f0; }
+
+/* ── Mobile layout (≤768px) ──────────────────────── */
+@media (max-width: 768px) {
+    body {
+        padding: 6px;
+    }
+
+    .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        max-width: 100%;
+    }
+
+    /* Sidebars hidden on mobile */
+    .grid-sidebar-toc,
+    .grid-sidebar-review,
+    .grid-sidebar-copyright,
+    .grid-sidebar-left {
+        display: none;
+    }
+
+    /* All content cells: reset to single-column natural flow */
+    .grid-breadcrumbs,
+    .grid-content-header,
+    .grid-content-nav,
+    .grid-content-body,
+    .grid-content-main,
+    .grid-content-footer {
+        grid-column: 1;
+        grid-row: auto;
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-top: 0;
+    }
+
+    /* Header: let logo wrap below title on very narrow screens */
+    .grid-content-header {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    /* Poem text: wrap long lines instead of scrolling horizontally */
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
