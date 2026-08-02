@@ -70,18 +70,15 @@ function clean(id) {
 </script>
 
 <center>
-<table border=0 width="707">
+<table id="idx-outer" border=0 width="707">
    <tr>
-      <td width="320" height="208" rowspan="2">
-         <table border=0>
+      <td width="320" height="208" rowspan="2" class="idx-left">
+         <div class="idx-quote q1_E">
+            "Sheen of the Dark..."<br/>Should this be a<br/>question?
+         </div>
+         <table class="idx-inner" border=0>
             <tr>
-               <td></td>
-               <td class='q1_E'>
-                  "Sheen of the Dark..."<br/>Should this be a<br/>question?
-               </td>
-            </tr>
-            <tr>
-               <td>
+               <td class="idx-icon">
                   <a href='page_other/cv_en.html'
                   onMouseover="img_act('btn','gif/inyan1.gif')"
                   onMouseout="img_inact('btn','gif/inyan2.gif')" title="Author">
@@ -94,7 +91,7 @@ function clean(id) {
                </td>
             </tr>
             <tr>
-               <td>
+               <td class="idx-icon">
                   <a href='page_other/content.html'
                   onMouseover="img_act('btn1','gif/inyan2.gif')"
                   onMouseout="img_inact('btn1','gif/inyan1.gif')" title="Texts">
@@ -107,7 +104,7 @@ function clean(id) {
                </td>
             </tr>
             <tr>
-               <td align="center">
+               <td class="idx-icon" align="center">
                   <a href="index.html" lang="ru" hreflang="ru"
                   onMouseover="img_act('btn2','gif/ru1.gif')"
                   onMouseout="img_inact('btn2','gif/ru2.gif')" title="Вступление">
@@ -120,7 +117,7 @@ function clean(id) {
                </td>
             </tr>
             <tr>
-               <td align="center">
+               <td class="idx-icon" align="center">
                   <a href="index_h.html" lang="he" hreflang="he"
                   onMouseover="img_act('btn3','gif/he1.gif')"
                   onMouseout="img_inact('btn3','gif/he2.gif')" title="Hebrew Introduction">
@@ -140,19 +137,19 @@ function clean(id) {
             </tr>
          </table>
       </td>
-      <td align="left" width="346" height="208" rowspan="2">
+      <td align="left" width="346" height="208" rowspan="2" class="idx-ninja">
          <a href='page_other/content.html'><img src="jpg/ninja.jpg" title="GO" border=0></a>
       </td>
-      <td width="41" height="10">
+      <td width="41" height="10" class="idx-logo">
          <img src="jpg/basad1.jpg"><br/>
-         <a href='page_other/slide.html'><img src="gif/logo.gif" border=0></a>
+         <a href='page_other/slides.html'><img src="gif/logo.gif" border=0></a>
       </td>
    </tr>
 <tr>
-   <td width="41" height="198">&nbsp;</td>
+   <td width="41" height="198" class="idx-spacer">&nbsp;</td>
 </tr>
 <tr>
-   <td colspan="3" align="center">
+   <td colspan="3" align="center" class="idx-hr">
 
 		<hr size="3" width="600">
 		<!-- Yandex.Metrika -->
@@ -169,7 +166,7 @@ function clean(id) {
    </td>
 </tr>
 <tr> 
-  <td colspan="2" align="rigth">
+  <td colspan="2" align="rigth" class="idx-search">
       <!-- Google Search -->
 	  <input type="text" class="search_google" id="search" value="" onclick="clean('search')" onkeydown="if(event.key==='Enter') open_url('search')" title="Site search by Google™" autocomplete="on"/>
 	  <input type="button" style="font-weight:bold;" value="&#128269;" onclick="open_url('search')" title="Site search by Google™"/>
@@ -182,7 +179,7 @@ function clean(id) {
    </td> 
 </tr>
 <tr>
-   <td colspan="3" align="left">
+   <td colspan="3" align="left" class="idx-copyright">
       <font size=-1 color="ff0000">Copyright &copy; 1995-2026 <a href='mailto:mbox4s@gmail.com' title='S-on Kritchker'>S-on Kritchker</a></font>
    </td>
 </tr>

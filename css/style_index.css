@@ -221,26 +221,30 @@ a:hover
 
 /* ── Mobile layout (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
-    body {
-        margin: 0 !important;
-        padding: 6px !important;
-    }
-    table {
-        width: 100% !important;
-    }
-    td {
-        display: block !important;
-        width: auto !important;
-        height: auto !important;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    hr {
-        width: 100% !important;
-    }
-    .link_More, .link_More_H {
-        padding-top: 10px;
-    }
+    body { margin: 0 !important; padding: 6px !important; }
+    img  { max-width: 100%; height: auto; }
+    hr   { width: 100% !important; }
+    .link_More, .link_More_H { padding-top: 10px; }
+
+    /* Outer table → flex column; trs become transparent so tds bubble up */
+    #idx-outer { display: flex !important; flex-direction: column !important; width: 100% !important; }
+    #idx-outer > tbody              { display: contents !important; }
+    #idx-outer > tbody > tr        { display: contents !important; }
+
+    /* LEFT/RIGHT td transparent → idx-quote div + idx-inner table become direct flex items */
+    .idx-left { display: contents !important; }
+
+    /* Section order */
+    .idx-quote     { order: 1; }
+    .idx-logo      { order: 2; }
+    .idx-ninja     { order: 3; width: 100%; }
+    .idx-inner     { order: 4; width: 100%; }
+    .idx-spacer    { display: none !important; }
+    .idx-hr, .idx-share, .idx-search, .idx-copyright { order: 5; width: 100%; }
+
+    /* Hide icons; flatten inner links table into a vertical list */
+    .idx-icon { display: none !important; }
+    .idx-inner          { display: block !important; }
+    .idx-inner tr       { display: block !important; width: 100% !important; }
+    .idx-inner td       { display: block !important; width: auto !important; height: auto !important; }
 }

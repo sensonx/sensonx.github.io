@@ -51,32 +51,29 @@ function img_inact(imgName, imgSrc) {
 </script>
 
 <center>
-<table border=0 width="671">
+<table id="idx-outer" border=0 width="671">
    <tr>
-      <td width="41" height="10" align="right">
+      <td width="41" height="10" align="right" class="idx-logo">
          <img src="jpg/basad1.jpg"><br/>
          <a href='page_other/slides.html'><img src="gif/logo.gif" border=0></a>
       </td>
-      <td align=left width="346" height="208" rowspan="2">
+      <td align=left width="346" height="208" rowspan="2" class="idx-ninja">
          <a href='page_cycle/he_door.html'><img src="jpg/ninja.jpg" title="GO" border=0></a>
       </td>
-      <td width="290" height="208" rowspan="2" align="right">
-         <table border=0>
-            <tr>
-               <td class='q1_H'>
-                  "...&#1494;&#1493;&#1492;&#1512; &#1492;&#1495;&#1493;&#1513;&#1498;"<br/>
-                  &#1492;&#1488;&#1501; &#1494;&#1493; &#1495;&#1497;&#1497;&#1489; &#1500;&#1492;&#1497;&#1493;&#1514;<br/>
-                  ?&#1492;&#1513;&#1488;&#1500;&#1492;
-               </td>
-               <td></td>
-            </tr>
+      <td width="290" height="208" rowspan="2" align="right" class="idx-left">
+         <div class="idx-quote q1_H">
+            "...&#1494;&#1493;&#1492;&#1512; &#1492;&#1495;&#1493;&#1513;&#1498;"<br/>
+            &#1492;&#1488;&#1501; &#1494;&#1493; &#1495;&#1497;&#1497;&#1489; &#1500;&#1492;&#1497;&#1493;&#1514;<br/>
+            ?&#1492;&#1513;&#1488;&#1500;&#1492;
+         </div>
+         <table class="idx-inner" border=0>
             <tr>
                <td class='content_Link_H'>
                   <a href='page_other/cv_he.html'
                   onMouseover="img_act('btn','gif/inyan1.gif')"
                   onMouseout="img_inact('btn','gif/inyan2.gif')" title="Author">&#1492;&#1502;&#1495;&#1489;&#1512;</a>
                </td>
-               <td>
+               <td class="idx-icon">
                   <a href='page_other/cv_he.html'
                   onMouseover="img_act('btn','gif/inyan1.gif')"
                   onMouseout="img_inact('btn','gif/inyan2.gif')" title="Author">
@@ -89,7 +86,7 @@ function img_inact(imgName, imgSrc) {
                   onMouseover="img_act('btn1','gif/inyan2.gif')"
                   onMouseout="img_inact('btn1','gif/inyan1.gif')" title="Texts">&#1502;&#1497;&#1500;&#1497;&#1501;</a>
                </td>
-               <td>
+               <td class="idx-icon">
                   <a href='page_cycle/he_door.html'
                   onMouseover="img_act('btn1','gif/inyan2.gif')"
                   onMouseout="img_inact('btn1','gif/inyan1.gif')" title="Texts">
@@ -102,7 +99,7 @@ function img_inact(imgName, imgSrc) {
                   onMouseover="img_act('btn2','gif/en1.gif')"
                   onMouseout="img_inact('btn2','gif/en2.gif')" title="English Introduction">English</a>
                </td>
-               <td align="center">
+               <td class="idx-icon" align="center">
                   <a href="index_e.html" lang="en" hreflang="en"
                   onMouseover="img_act('btn2','gif/en1.gif')"
                   onMouseout="img_inact('btn2','gif/en2.gif')" title="English Introduction">
@@ -115,7 +112,7 @@ function img_inact(imgName, imgSrc) {
                   onMouseover="img_act('btn3','gif/ru1.gif')"
                   onMouseout="img_inact('btn3','gif/ru2.gif')" title="Russian Introduction">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a>
                </td>
-               <td align="center">
+               <td class="idx-icon" align="center">
                   <a href="index.html" lang="ru" hreflang="ru"
                   onMouseover="img_act('btn3','gif/ru1.gif')"
                   onMouseout="img_inact('btn3','gif/ru2.gif')" title="Russian Introduction">
@@ -133,10 +130,10 @@ function img_inact(imgName, imgSrc) {
       </td>
    </tr>
 <tr>
-   <td width="41" height="198">&nbsp;</td>
+   <td width="41" height="198" class="idx-spacer">&nbsp;</td>
 </tr>
 <tr>
-   <td colspan="3" align="center">
+   <td colspan="3" align="center" class="idx-hr">
 		<hr size="3" width="600">
 		<!-- Yandex.Metrika -->
 		<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
@@ -151,7 +148,7 @@ function img_inact(imgName, imgSrc) {
    </td>
 </tr>
 <tr> 
-  <td colspan="3" align="right">
+  <td colspan="3" align="right" class="idx-share">
       <!-- Yandex.API.Blog -->
       <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script> 
       <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" 
@@ -160,7 +157,7 @@ function img_inact(imgName, imgSrc) {
    </td> 
 </tr>
 <tr> 
-  <td colspan="3" align="right">
+  <td colspan="3" align="right" class="idx-search">
       <form style="text-align:right;" onsubmit="window.open('https://www.google.com/search?q='+encodeURIComponent(this.q.value)+'+site:sensonx.github.io','_blank');return false;">
   <button type="submit" style="font-weight:bold;">&#128269;</button>
   <input name="q" type="text" class="search_google_H" value="" autocomplete="on"/>
@@ -168,7 +165,7 @@ function img_inact(imgName, imgSrc) {
    </td> 
 </tr>
 <tr>
-   <td colspan="3" align="left">
+   <td colspan="3" align="left" class="idx-copyright">
       <font size=-1 color="ff0000">Copyright &copy; 1995-2026 <a href='mailto:mbox4s@gmail.com' title='S-on Kritchker'>S-on Kritchker</a></font>
    </td>
 </tr>

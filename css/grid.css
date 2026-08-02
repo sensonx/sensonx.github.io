@@ -146,6 +146,14 @@ body {
     color: #333;
 }
 
+/* Mail / correspondence page body box */
+.letter-box {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #b8a890;
+    border-radius: 4px;
+    padding: 1em 1.4em;
+}
+
 /* ── Sidebar elements ─────────────────────────────── */
 /* Font is set on .grid-sidebar-review container; these rules handle spacing only */
 .links {
