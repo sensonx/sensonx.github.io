@@ -276,6 +276,7 @@ body {
     }
 
     /* All grid cells: single column, auto rows */
+    /* min-width:0 overrides CSS Grid's default min-width:auto so items respect the 1fr column */
     .grid-breadcrumbs,
     .grid-content-header,
     .grid-content-nav,
@@ -289,9 +290,11 @@ body {
         grid-column: 1;
         grid-row: auto;
         width: auto;
+        min-width: 0;
         max-width: 100%;
         box-sizing: border-box;
         padding-top: 0;
+        overflow-wrap: break-word;
     }
 
     /* Visual order: content first, sidebars after bottom nav */
@@ -310,6 +313,20 @@ body {
         flex-wrap: wrap;
         gap: 6px;
     }
+
+    /* Navigation: allow title to wrap if needed on narrow screens */
+    .navigation-top, .navigation-bottom {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    /* background-attachment:fixed is broken on most mobile browsers */
+    body { background-attachment: scroll; }
+
+    /* Reduce font sizes that are too large at full mobile width */
+    .txt_intro           { font-size: 14px; }
+    .grid-sidebar-review { font-size: 13px; }  /* covers .links children too */
+    .review              { font-size: 13px; }
 
     /* Poem text: wrap long lines instead of scrolling horizontally */
     pre {

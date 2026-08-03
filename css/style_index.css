@@ -236,14 +236,14 @@ a:hover
 
     /* Section order */
     .idx-quote     { order: 1; }
-    .idx-logo      { order: 2; }
+    .idx-logo      { order: 2; width: 100% !important; height: auto !important; text-align: center; }
     .idx-ninja     { order: 3; width: 100%; }
     .idx-inner     { order: 4; width: 100%; }
     .idx-spacer    { display: none !important; }
     .idx-hr, .idx-share, .idx-search, .idx-copyright { order: 5; width: 100%; }
 
     /* Hide icons; flatten inner links table into a vertical list */
-    .idx-icon { display: none !important; }
+    .idx-inner .idx-icon { display: none !important; }  /* higher specificity than .idx-inner td */
     .idx-inner          { display: block !important; }
     .idx-inner tr       { display: block !important; width: 100% !important; }
     .idx-inner td       { display: block !important; width: auto !important; height: auto !important; }
