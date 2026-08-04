@@ -334,3 +334,22 @@ body {
         word-break: break-word;
     }
 }
+
+/* ── Print ───────────────────────────────────────── */
+@media print {
+    body { background: white !important; color: black !important; padding: 0; }
+    .grid-breadcrumbs,
+    .grid-sidebar-toc,
+    .grid-sidebar-review,
+    .search-form,
+    #topBtn,
+    .navigation-top,
+    .navigation-bottom { display: none !important; }
+    .layout-grid { display: block; max-width: 100%; box-shadow: none; }
+    .grid-content-header,
+    .grid-content-main,
+    .grid-content-footer,
+    .grid-sidebar-copyright { display: block; width: auto; }
+    /* restore text selection so readers can copy into a document */
+    .txt_body, .review-entry, .letter-box { user-select: text !important; }
+}
