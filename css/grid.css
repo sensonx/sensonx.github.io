@@ -175,6 +175,11 @@ body {
 .copyright {
     margin-top: 20px;
 }
+.rights-link {
+    font-size: 11px;
+    color: inherit;
+    opacity: 0.7;
+}
 
 /* ── Navigation elements - match .navigate from style_base.css ── */
 .nav-edge {
@@ -262,6 +267,11 @@ body {
 .search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 2px; }
 .search-input { width: 150px; font-size: 11px; padding: 2px 4px; border: 1px solid #999; }
 .search-btn { font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; background: #f0f0f0; }
+
+/* -- Keyboard focus: visible outline on interactive elements -- */
+.search-input:focus-visible,
+.search-btn:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
+.layout-grid a:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
 
 /* ── Mobile layout (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
