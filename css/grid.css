@@ -11,6 +11,7 @@
     .txt-name-title { color: #FF0000 !important; }
     .separator      { border-top-color: #000 !important; }
     .search-btn     { background: #f0f0f0 !important; color: #000 !important; }
+    .txt_body, .review-entry, .letter-box { color: #000021 !important; }
 }
 
 body {

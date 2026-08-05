@@ -8,6 +8,7 @@ body
 	background-color: #FCF2E6;
 	background-image: url(../jpg/fone.jpg);
 	background-attachment: fixed;
+	color-scheme: light;
 	font-family: Tahoma,Verdana;
 }
 
@@ -82,6 +83,7 @@ a:hover
 
 .txt_body
 {
+	color: #000021;
 	font-size: 16px;
 	font-style: italic;
 /*	font-weight: bold;
