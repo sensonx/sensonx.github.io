@@ -29,7 +29,7 @@ body {
 */
 .layout-grid {
     display: grid;
-    grid-template-columns: 270px minmax(0, 1fr) 110px;
+    grid-template-columns: 300px minmax(0, 1fr) 110px;
     grid-template-rows: auto auto auto auto auto;
     gap: 10px;
     max-width: 1000px;
@@ -171,13 +171,18 @@ body {
 
 /* ── Sidebar elements ─────────────────────────────── */
 /* Font is set on .grid-sidebar-review container; these rules handle spacing only */
+
+/* Suppress trailing <br> blank line at the bottom of each sidebar block */
+.grid-sidebar-review .review br:last-child,
+.grid-sidebar-review .links br:last-child { display: none; }
 .links {
-    margin-bottom: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .review {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .copyright {
