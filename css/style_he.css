@@ -125,3 +125,19 @@ a:hover
 	background-repeat: no-repeat;
 	background-position: right;
 }
+
+/* Force light palette for browsers that ignore color-scheme (e.g. Samsung Internet Smart Dark Mode) */
+@media (prefers-color-scheme: dark) {
+	body {
+		color: #000021 !important;
+		background-color: #FCF2E6 !important;
+		background-image: url(../jpg/fone.jpg) !important;
+	}
+	a:link    { color: #000039 !important; }
+	a:visited { color: #6C006C !important; }
+	a:active  { color: #FF0000 !important; }
+	a:hover   { color: #0000FF !important; }
+	.txt_name  { color: #FF0000 !important; }
+	.txt_intro { color: #000023 !important; }
+	.copyright { color: #FF0000 !important; }
+}
