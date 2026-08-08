@@ -61,6 +61,18 @@ body {
                            font-family: "Times New Roman", serif; font-size: 16px;
                            font-style: italic; font-weight: bold; }
 .grid-sidebar-copyright  { grid-column: 1/2; grid-row: 5; padding-right: 20px; padding-left: 10px; align-self: end; }
+/* accord/draft: nav stays in row 4, so copyright moves to row 4 to align with nav bottom */
+.grid-sidebar-copyright--row4 { grid-row: 4; }
+/* draft: sidebar as flex column — copyright pinned to bottom, aligned with nav */
+.grid-sidebar-col {
+    grid-column: 1/2; grid-row: 3 / 6;
+    display: flex; flex-direction: column;
+    padding-right: 20px;
+}
+.grid-sidebar-col > .grid-sidebar-toc,
+.grid-sidebar-col > .grid-sidebar-review,
+.grid-sidebar-col > .grid-sidebar-copyright { padding-right: 0; }
+.grid-sidebar-col > .grid-sidebar-copyright { margin-top: auto; align-self: stretch; }
 
 /* Title + date + logo header area — row 2, spans content+logo columns */
 .grid-content-header {
@@ -153,7 +165,7 @@ body {
 /* Tight margins for separator inside nav (between nav-top and intro) */
 .grid-content-nav .separator    { margin-top: 4px; margin-bottom: 8px; }
 /* Tight margins for separator inside footer (between author and nav-bottom) */
-.grid-content-footer .separator { margin-top: 10px; margin-bottom: 6px; }
+.grid-content-footer .separator { margin-top: 10px; margin-bottom: 20px; }
 
 /* Author credit - matches .txt_author from style_base.css */
 .author-block {
@@ -309,7 +321,8 @@ body {
     .grid-sidebar-toc,
     .grid-sidebar-review,
     .grid-sidebar-copyright,
-    .grid-sidebar-left {
+    .grid-sidebar-left,
+    .grid-sidebar-col {
         grid-column: 1;
         grid-row: auto;
         width: auto;
@@ -319,6 +332,7 @@ body {
         padding-top: 0;
         overflow-wrap: break-word;
     }
+    .grid-sidebar-col { display: block; padding-right: 0; }
 
     /* Visual order: content first, sidebars after bottom nav */
     .grid-breadcrumbs                          { order: 1; }
