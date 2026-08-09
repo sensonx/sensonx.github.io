@@ -219,6 +219,11 @@ a:hover
 }
 #topBtn:hover { opacity: 1; }
 
+.idx-copyright .rights-link {
+    font-size: 11px;
+    opacity: 0.75;
+}
+
 /* ── Mobile layout (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
     body { margin: 0 !important; padding: 6px !important; }
