@@ -89,6 +89,29 @@ body {
     text-align: right;
     flex-shrink: 0;
 }
+.header-logo a,
+.header-logo img {
+    display: block;
+}
+/* Text-based "basad1.jpg" replacement — same width as logo.gif, fused with it (no gap/border) */
+.basad-text,
+a:link .basad-text,
+a:visited .basad-text,
+a:hover .basad-text,
+a:active .basad-text {
+    display: block;
+    box-sizing: border-box;
+    width: 41px;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #fff;
+    color: #000;
+    font-family: FrankRuehl, David, Tahoma, Verdana, sans-serif;
+    font-size: 19px;
+    line-height: 16px;
+    padding-right: 7px;
+    text-align: right;
+}
 
 /* Body content — used by lyric pages (single block) */
 .grid-content-body {
