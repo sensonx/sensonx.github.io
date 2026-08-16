@@ -33,6 +33,61 @@ a:hover
 	text-decoration: none;
 }
 
+.idx-icon
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.lang-letter
+{
+	font-size: 22px;
+	font-weight: bold;
+	color: #EAD3A6;
+	-webkit-text-stroke: 1px #8B5A2B;
+	text-stroke: 1px #8B5A2B;
+	display: inline-block;
+	filter: none;
+	transition: filter 0.15s ease;
+}
+.lang-letter:hover,
+a:hover .lang-letter
+{
+	filter: sepia(0.5) saturate(3) hue-rotate(-20deg) brightness(1.1);
+}
+.idx-icon-letter
+{
+	vertical-align: bottom;
+}
+
+.feather-icon
+{
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	filter: none;
+	transition: filter 0.15s ease;
+}
+.feather-icon:hover,
+a:hover .feather-icon
+{
+	filter: sepia(0.5) saturate(3) hue-rotate(-20deg) brightness(1.1);
+}
+
+.scroll-icon
+{
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	filter: none;
+	transition: filter 0.15s ease;
+}
+.scroll-icon:hover,
+a:hover .scroll-icon
+{
+	filter: sepia(0.5) saturate(3) hue-rotate(-20deg) brightness(1.1);
+}
+
 .q1
 {
 	font-size: 18px;

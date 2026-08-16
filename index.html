@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png" />
-    <link rel='stylesheet' type='text/css' href='css/style_index.css?v=fe688f4b'/>
+    <link rel='stylesheet' type='text/css' href='css/style_index.css?v=b090da72'/>
     <title>Тьмы ли сияние... (S-on Kritchker © project) | Кричкер Семён: тексты, стихи, песни, аккорды...</title>
     <meta name="description" content="Семён Кричкер, проект 'Тьмы ли сияние...' - тексты стихов и песен (ищу единомышленников для написания музыки и создания песен на основе моих работ); Senson S.Kritchker, 'Sheen of the Dark' - poems &amp; songs to discuss &amp; implement with readers or redactor and interested persons; TAGS: текст, стих, стихотворение, песня, музыка, аккорд, senson, kritchker, lyrics, poem, song, music, accord"/>
     <meta name="keywords" content="текст, стих, стихотворение, песня, музыка, аккорд, тьма ,сияние, Кричкер, Семен, Семён, lyrics, poem, song, music, literary-work, gitar, accord, senson, kritchker, krichker, senson s., sheen, dark"/>
@@ -42,20 +42,6 @@
 <body marginwidth=36 marginheight=0>
 
 <script language="javascript">
-//========= Image functions ================
-btnon = new Image();
-btnoff = new Image();
-
-function img_act(imgName, imgSrc) {
-   btnon.src = imgSrc;
-   document[imgName].src = btnon.src;
-}
-
-function img_inact(imgName, imgSrc) {
-   btnoff.src = imgSrc;
-   document[imgName].src = btnoff.src;
-}
-
 //========= Search functions ================
 var isClean;
 isClean = true;
@@ -85,54 +71,63 @@ function clean(id) {
          <table class="idx-inner" border=0>
             <tr>
                <td class="idx-icon">
-                  <a href='page_other/cv.html'
-                  onMouseover="img_act('btn','gif/inyan1.gif')"
-                  onMouseout="img_inact('btn','gif/inyan2.gif')" title="Автор">
-                  <img border=0 name="btn" src="gif/inyan3.gif" alt=""></a>
+                  <a href='page_other/cv.html' title="Автор" aria-label="Автор"><svg class="feather-icon" viewBox="0 0 47 47" width="34" height="34" aria-hidden="true" focusable="false">
+   <path fill="#F0E4D0" stroke="#8B5A2B" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+      M36 4
+      C 30 2, 22 4, 16 12
+      C 9 21, 6 32, 5 42
+      L 1 46
+      L 8 42
+      C 14 39, 20 33, 24 27
+      C 30 18, 34 10, 36 4 Z" />
+   <path fill="none" stroke="#8B5A2B" stroke-width="1.2" stroke-linecap="round" d="
+      M24 27 L30 20
+      M20 31 L26 24
+      M16 35 L22 28
+      M12 38 L17 32" />
+</svg>
+
+
+
+</a>
                </td>
                <td class='content_Link'>
-                  <a href='page_other/cv.html'
-                  onMouseover="img_act('btn','gif/inyan1.gif')"
-                  onMouseout="img_inact('btn','gif/inyan2.gif')" title="Автор">Автор</a>
+                  <a href='page_other/cv.html' title="Автор">Автор</a>
                </td>
             </tr>
             <tr>
                <td class="idx-icon">
-                  <a href='page_other/content.html'
-                  onMouseover="img_act('btn1','gif/inyan2.gif')"
-                  onMouseout="img_inact('btn1','gif/inyan1.gif')" title="Тексты">
-                  <img border=0 name="btn1" src="gif/inyan3.gif" alt=""></a>
+                  <a href='page_other/content.html' title="Тексты" aria-label="Тексты"><svg class="scroll-icon" viewBox="0 0 47 47" width="34" height="34" aria-hidden="true" focusable="false">
+   <rect x="10" y="7" width="27" height="7" rx="3.5" fill="#8B5A2B" />
+   <rect x="10" y="34" width="27" height="7" rx="3.5" fill="#8B5A2B" />
+   <rect x="12" y="12" width="23" height="24" fill="#EAD3A6" />
+   <line x1="16" y1="18" x2="31" y2="18" stroke="#8B5A2B" stroke-width="1.4" stroke-linecap="round" />
+   <line x1="16" y1="23" x2="31" y2="23" stroke="#8B5A2B" stroke-width="1.4" stroke-linecap="round" />
+   <line x1="16" y1="28" x2="27" y2="28" stroke="#8B5A2B" stroke-width="1.4" stroke-linecap="round" />
+</svg>
+
+</a>
                </td>
                <td class='content_Link'>
-                  <a href='page_other/content.html'
-                  onMouseover="img_act('btn1','gif/inyan2.gif')"
-                  onMouseout="img_inact('btn1','gif/inyan1.gif')" title="Тексты">Тексты</a>
+                  <a href='page_other/content.html' title="Тексты">Тексты</a>
                </td>
             </tr>
             <tr>
-               <td class="idx-icon" align="center">
-                  <a href="index_e.html" lang="en" hreflang="en"
-                  onMouseover="img_act('btn2','gif/en1.gif')"
-                  onMouseout="img_inact('btn2','gif/en2.gif')">
-                  <img border=0 name="btn2" src="gif/en2.gif" alt=""></a>
+               <td class="idx-icon idx-icon-letter" align="center">
+                  <a href="index_e.html" lang="en" hreflang="en" title="English" aria-label="English"><span class="lang-letter" style="font-family: Times New Roman, serif; font-size: 26px;">E</span>
+</a>
                </td>
                <td class='link_EN'>
-                  <a href="index_e.html" lang="en" hreflang="en"
-                  onMouseover="img_act('btn2','gif/en1.gif')"
-                  onMouseout="img_inact('btn2','gif/en2.gif')">English</a>
+                  <a href="index_e.html" lang="en" hreflang="en">English</a>
                </td>
             </tr>
             <tr>
-               <td class="idx-icon" align="center">
-                  <a href="index_h.html" lang="he" hreflang="he"
-                  onMouseover="img_act('btn3','gif/he1.gif')"
-                  onMouseout="img_inact('btn3','gif/he2.gif')">
-                  <img border=0 name="btn3" src="gif/he2.gif" alt=""></a>
+               <td class="idx-icon idx-icon-letter" align="center">
+                  <a href="index_h.html" lang="he" hreflang="he" title="עברית" aria-label="עברית"><span class="lang-letter" style="font-family: FrankRuehl, David, Tahoma, Verdana, sans-serif; font-size: 36px; font-weight: normal; position: relative; top: 4px;">ע</span>
+</a>
                </td>
                <td class='link_HE'>
-                  <a href="index_h.html" lang="he" hreflang="he"
-                  onMouseover="img_act('btn3','gif/he1.gif')"
-                  onMouseout="img_inact('btn3','gif/he2.gif')">עברית</a>
+                  <a href="index_h.html" lang="he" hreflang="he">עברית</a>
                </td>
             </tr>
             <tr>
