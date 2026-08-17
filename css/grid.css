@@ -145,6 +145,12 @@ a:active .basad-text {
     margin-top: 1.5em;
 }
 
+/* _all pages: title/date sit inside .txt_body (inherits italic) — un-italicize to match lyric pages */
+.content-list .txt_name,
+.content-list .date {
+    font-style: normal;
+}
+
 /* Individual list rows */
 .list-row {
     display: table-row;
