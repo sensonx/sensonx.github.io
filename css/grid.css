@@ -112,6 +112,13 @@ a:active .basad-text {
     padding-right: 7px;
     text-align: right;
 }
+/* Same "בס"ד" replacement, but inline within cv/cv_en body prose — not a fixed logo-column block */
+.basad-text-inline {
+    font-family: FrankRuehl, David, Tahoma, Verdana, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    color: #000;
+}
 
 /* Body content — used by lyric pages (single block) */
 .grid-content-body {
