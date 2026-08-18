@@ -256,6 +256,7 @@ a:active .basad-text {
 
 .txt-name-title {
     flex: 2;
+    margin: 0; /* now an <h1>; zero the UA default heading margin to match the old div */
     text-align: center;
     color: #FF0000;
     font-family: Comic Sans MS;
@@ -267,7 +268,8 @@ a:active .basad-text {
 /* ── Content layout helpers ──────────────────────── */
 /* cycle_name, date, txt_intro, txt_body typography handled by style_base.css */
 .cycle_name {
-    margin-bottom: 4px;
+    margin: 0 0 4px 0; /* now an <h1>/<h2>; zero the UA default heading margin to match the old div */
+    font-weight: normal; /* UA heading default is bold */
 }
 
 /* txt_intro: italic/size override; font-family comes from style_*.css (Times NR for cycles) */
