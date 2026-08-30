@@ -156,16 +156,6 @@ a:hover .scroll-icon
 	vertical-align: bottom;
 }
 
-.link_More
-{
-	font-size: 14px;
-	font-family: Tahoma,Verdana;
-	font-style: italic;
-	color: #00ffff;
-	position: relative;
-	padding-top: 50px;
-}
-
 .search_google
 {
 	background-image: url('../gif/google.gif');
@@ -217,17 +207,6 @@ a:hover .scroll-icon
 	position: relative;
 	padding-top: 10px;
 	vertical-align: bottom;
-	text-align: right;
-}
-
-.link_More_H
-{
-	font-size: 14px;
-	font-family: Tahoma,Verdana;
-	font-style: italic;
-	color: #00ffff;
-	position: relative;
-	padding-top: 50px;
 	text-align: right;
 }
 
@@ -327,7 +306,6 @@ a:active .basad-text {
     body { margin: 0 !important; padding: 6px !important; }
     img  { max-width: 100%; height: auto; }
     hr   { width: 100% !important; }
-    .link_More, .link_More_H { padding-top: 10px; }
 
     /* Outer table → grid; trs become transparent so tds bubble up */
     #idx-outer { display: grid !important; grid-template-columns: 1fr auto !important; width: 100% !important; }
