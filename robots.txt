@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sensonx.github.io/sitemap.xml
+Sitemap: https://sensonx.github.io/sitemap2.xml
 
