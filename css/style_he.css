@@ -4,9 +4,9 @@
 body
 {
 	color: #000021;
-	background: url(../jpg/fone.jpg);
+	background: url(../jpg/bg.jpg);
 	background-color: #FCF2E6;
-	background-image: url(../jpg/fone.jpg);
+	background-image: url(../jpg/bg.jpg);
 	background-attachment: fixed;
 	color-scheme: light;
 	font-family: Tahoma,Verdana;

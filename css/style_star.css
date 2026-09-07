@@ -4,9 +4,9 @@
 body
 {
 	color: #0000FF;
-	background: url(../jpg/fone_star.jpg);
+	background: url(../jpg/bg_stars.jpg);
 	background-color: #141011;
-	background-image: url(../jpg/fone_star.jpg);
+	background-image: url(../jpg/bg_stars.jpg);
 	background-attachment: fixed;
 	font-family: Tahoma,Verdana;
 }
