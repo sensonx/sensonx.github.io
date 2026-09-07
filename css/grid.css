@@ -167,6 +167,66 @@ a:active .basad-text {
     text-decoration: none;
 }
 
+/* Decorative bullet dots — replaces gif/button.gif and gif/button0.gif raster icons.
+   Both source GIFs are animated (verified: button.gif = 4 frames @ 250ms, button0.gif =
+   6 frames @ 170ms, each cycling through the color wheel) — reproduced here with a
+   looping hue-rotate filter, stepped (not smoothed) to match the original's hard frame flips. */
+.bullet-dot,
+.bullet-dot0 {
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: baseline;
+}
+.bullet-dot {
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background:
+        radial-gradient(circle at 28% 22%, #fff 0px, #fff 1.1px, rgba(255, 255, 255, 0) 2.4px),
+        radial-gradient(circle at 35% 30%, #fff 0%, #ff3333 30%, #990000 70%, #0f0011 100%);
+    animation: bullet-hue-cycle 1s steps(4) infinite;
+}
+.bullet-dot0 {
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid navy;
+    position: relative;
+}
+.bullet-dot0::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 30% 24%, #fff 0px, #fff 1.1px, rgba(255, 255, 255, 0) 2.4px),
+        radial-gradient(circle at 40% 30%, #d78fff 0%, #b300ff 35%, #8700bf 65%, #43005b 100%);
+    animation: bullet-hue-cycle 1.02s steps(6) infinite;
+}
+@keyframes bullet-hue-cycle {
+    to { filter: hue-rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .bullet-dot,
+    .bullet-dot0::before {
+        animation: none;
+    }
+}
+
+/* Decorative divider line — replaces gif/separator.gif raster (rainbow gradient) */
+.separator-line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right,
+        #000020 0%, #000a7a 5%, #0026cb 10%, #0058fc 15%, #0094ff 20%,
+        #00d3ce 25%, #01fb85 30%, #00ff35 35%, #00f406 40%, #00cf00 45%,
+        #009b00 50%, #116100 55%, #572500 60%, #b10000 65%, #fb0000 70%,
+        #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
+}
+
 /* Date tag styling */
 .list-date {
     display: table-cell;
