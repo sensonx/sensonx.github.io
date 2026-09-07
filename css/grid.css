@@ -227,6 +227,72 @@ a:active .basad-text {
         #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
 }
 
+/* Wider variant — page_other/gbook.html only, sized close to the guestbook form's width */
+.separator-line-wide {
+    display: inline-block;
+    vertical-align: middle;
+    width: 350px;
+    max-width: 90%;
+    height: 3px;
+    background: linear-gradient(to right,
+        #000020 0%, #000a7a 5%, #0026cb 10%, #0058fc 15%, #0094ff 20%,
+        #00d3ce 25%, #01fb85 30%, #00ff35 35%, #00f406 40%, #00cf00 45%,
+        #009b00 50%, #116100 55%, #572500 60%, #b10000 65%, #fb0000 70%,
+        #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
+}
+
+/* HTML Comment Box guestbook widget (page_other/gbook.html) — neutralize the
+   ambient page font-color/italic it otherwise inherits, hide the RSS icon,
+   the moderator-only login icon, and the widget's own heading (duplicates the
+   page's own H1 title). "Not using..." attribution left visible (free-tier). */
+#HCB_comment_box {
+    color: #333;
+    font-style: normal;
+}
+#HCB_comment_box > a[href*="rss_clean"],
+#HCB_comment_box .admin-link,
+#HCB_comment_box > h3,
+#HCB_comment_box #comments_list > p {
+    display: none;
+}
+
+/* .gbook-form: centers the form in the main block, sizes/aligns fields per mockup */
+/* grown 95px (half of name field's 190px width) to the left of the old centered
+   370px box; right margin recreates that box's old right-edge position exactly */
+.gbook-form #hcb_form {
+    max-width: 465px;
+    margin: 0 calc(50% - 185px) 0 auto;
+}
+.gbook-form input#hcb_form_name {
+    width: 190px !important;
+}
+.gbook-form textarea#hcb_form_content {
+    width: 100% !important;
+    height: 200px !important;
+    box-sizing: border-box;
+}
+.gbook-form #hcb_submit {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    float: none !important;
+}
+.gbook-form .home-desc {
+    text-align: right;
+}
+
+/* gbook: align + size the nav/footer separator with the comment field beneath it
+   (field is 465px wide, starting 45px right of the content column's left edge) */
+.gbook-page .separator-color {
+    text-align: left;
+}
+.gbook-page .separator-line-wide {
+    width: 445px; /* comment field's 465px, minus 10px on each side */
+    max-width: 445px;
+    margin-left: 55px; /* comment field's left edge (45px) + 10px */
+}
+
+
 /* Date tag styling */
 .list-date {
     display: table-cell;
@@ -262,6 +328,14 @@ a:active .basad-text {
 .grid-content-nav .separator    { margin-top: 4px; margin-bottom: 8px; }
 /* Tight margins for separator inside footer (between author and nav-bottom) */
 .grid-content-footer .separator { margin-top: 10px; margin-bottom: 20px; }
+
+/* Colorful separator-line variant of .separator (gbook.html/banners.html only) */
+.separator-color {
+    text-align: center;
+    margin: 20px 0;
+}
+.grid-content-nav .separator-color    { margin-top: 4px; margin-bottom: 8px; }
+.grid-content-footer .separator-color { margin-top: 10px; margin-bottom: 20px; }
 
 /* Author credit - matches .txt_author from style_base.css */
 .author-block {
@@ -462,6 +536,9 @@ a:active .basad-text {
     .txt_intro           { font-size: 14px; }
     .grid-sidebar-review { font-size: 13px; }  /* covers .links children too */
     .review              { font-size: 13px; }
+
+    /* gbook: drop the fixed left-growth margin, just center within the narrow column */
+    .gbook-form #hcb_form { max-width: 100%; margin: 0 auto; }
 
     /* Poem text: wrap long lines instead of scrolling horizontally */
     pre {
