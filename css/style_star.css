@@ -11,6 +11,13 @@ body
 	font-family: Tahoma,Verdana;
 }
 
+/* breadcrumb plain (non-link) text only — the "stable" color per explicit
+   request; a:link/a:visited below stay more specific, so "Главная" keeps its own link colors */
+.grid-breadcrumbs
+{
+	color: #F400F4;
+}
+
 a:link
 {
 	color: #00FFFF;

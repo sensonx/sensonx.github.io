@@ -243,8 +243,10 @@ a:active .basad-text {
 
 /* HTML Comment Box guestbook widget (page_other/gbook.html) — neutralize the
    ambient page font-color/italic it otherwise inherits, hide the RSS icon,
-   the moderator-only login icon, and the widget's own heading (duplicates the
-   page's own H1 title). "Not using..." attribution left visible (free-tier). */
+   the moderator-only login icon, the widget's own heading (duplicates the
+   page's own H1 title), and its post-submit "thank you" confirmation text
+   (own .approval-msg class — can't be removed at the source, only hidden).
+   "Not using..." attribution left visible (free-tier). */
 #HCB_comment_box {
     color: #333;
     font-style: normal;
@@ -252,8 +254,21 @@ a:active .basad-text {
 #HCB_comment_box > a[href*="rss_clean"],
 #HCB_comment_box .admin-link,
 #HCB_comment_box > h3,
-#HCB_comment_box #comments_list > p {
+#HCB_comment_box #comments_list > p,
+#HCB_comment_box .approval-msg {
     display: none;
+}
+
+/* Posted comments: force a white card + black text — the widget's own
+   color:#333 (above) reads fine on a plain white page but is nearly
+   invisible against gbook's dark starfield background. !important needed:
+   the widget injects its own <style> tag after this stylesheet loads, so
+   equal-specificity rules would otherwise lose on source order alone. */
+#HCB_comment_box .comment {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 10px 14px !important;
+    border-radius: 4px !important;
 }
 
 /* .gbook-form: centers the form in the main block, sizes/aligns fields per mockup */
@@ -292,6 +307,11 @@ a:active .basad-text {
     margin-left: 55px; /* comment field's left edge (45px) + 10px */
 }
 
+/* gbook: page-scoped title color, per explicit request (not a site-wide
+   .cycle_name change — other bg_stars pages keep the default blue title) */
+.gbook-page .cycle_name {
+    color: #F80400;
+}
 
 /* Date tag styling */
 .list-date {
