@@ -4,22 +4,30 @@
 body
 {
 	color: #000021;
+	color-scheme: light;
+	font-family: Tahoma,Verdana;
+	position: relative;
+}
+
+/* Default content-page background (lyric/cycle/accord/draft/word/review/rights
+   pages) — scoped to :not(.mail-bg) so it can NEVER bleed onto mail pages
+   (page_mail/, .mail-bg in grid.css), which have their own fully independent
+   background rules. Editing one is guaranteed not to affect the other. */
+body:not(.mail-bg)
+{
 	background-color: #FCF2E6;
 	background-image:
 		radial-gradient(ellipse 50% 40% at 15% 25%, rgba(190,160,130,0.30), transparent 70%),
 		radial-gradient(ellipse 45% 50% at 80% 70%, rgba(160,125,95,0.25), transparent 70%),
 		radial-gradient(ellipse 55% 35% at 55% 10%, rgba(130,95,70,0.20), transparent 70%);
 	background-attachment: fixed;
-	color-scheme: light;
-	font-family: Tahoma,Verdana;
-	position: relative;
 }
 
 /* soft cream/white brushstroke grain, slowly drifting in place of the old
    bg.jpg photo texture — two overlapping noise layers (different seeds)
    cross-fade/shift out of phase so the page background gently "breathes" */
-body::before,
-body::after
+body:not(.mail-bg)::before,
+body:not(.mail-bg)::after
 {
 	content: "";
 	position: fixed;
@@ -29,12 +37,12 @@ body::after
 	background-size: 400px 400px;
 	background-repeat: repeat;
 }
-body::before
+body:not(.mail-bg)::before
 {
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'><filter id='n' x='0%25' y='0%25' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='3' seed='11' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.6 -0.35'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
 	animation: bg-noise-a 22s ease-in-out infinite alternate;
 }
-body::after
+body:not(.mail-bg)::after
 {
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' width='200' height='200'><filter id='n2' x='0%25' y='0%25' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='0.08' numOctaves='3' seed='29' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.6 -0.35'/></filter><rect width='200' height='200' filter='url(%23n2)'/></svg>");
 	animation: bg-noise-b 17s ease-in-out infinite alternate;
@@ -52,7 +60,7 @@ body::after
 }
 @media (prefers-reduced-motion: reduce)
 {
-	body::before, body::after { animation: none; opacity: 0.5; }
+	body:not(.mail-bg)::before, body:not(.mail-bg)::after { animation: none; opacity: 0.5; }
 }
 
 a:link
