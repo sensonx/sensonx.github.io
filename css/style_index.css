@@ -328,11 +328,26 @@ a:active .basad-text {
     text-align: right;
 }
 
+/* Colorful rainbow divider — replaces the plain <hr>, same gradient technique
+   as grid.css's .separator-line/.separator-line-wide (bg_stars pages) */
+.idx-separator-line {
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+    max-width: 90%;
+    height: 3px;
+    background: linear-gradient(to right,
+        #000020 0%, #000a7a 5%, #0026cb 10%, #0058fc 15%, #0094ff 20%,
+        #00d3ce 25%, #01fb85 30%, #00ff35 35%, #00f406 40%, #00cf00 45%,
+        #009b00 50%, #116100 55%, #572500 60%, #b10000 65%, #fb0000 70%,
+        #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
+}
+
 /* ── Mobile layout (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
     body { margin: 0 !important; padding: 6px !important; }
     img  { max-width: 100%; height: auto; }
-    hr   { width: 100% !important; }
+    .idx-separator-line { width: 100% !important; max-width: 100% !important; }
 
     /* Outer table → grid; trs become transparent so tds bubble up */
     #idx-outer { display: grid !important; grid-template-columns: 1fr auto !important; width: 100% !important; }
