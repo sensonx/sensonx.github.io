@@ -101,7 +101,7 @@ body::after
 	inset: 0;
 	z-index: -1;
 	pointer-events: none;
-	animation: star-twinkle 4.2s ease-in-out infinite alternate;
+	animation: star-twinkle 1s ease-in-out infinite alternate;
 }
 body::before
 {
@@ -140,8 +140,8 @@ body::after
 		radial-gradient(1.3px 1.3px at 66% 81%, rgba(255,255,255,0.69), transparent 60%);
 	background-size:
 		224px 215px, 174px 201px, 243px 229px, 190px 191px, 172px 164px, 229px 200px, 182px 170px, 125px 122px, 135px 149px, 165px 143px, 130px 177px, 122px 120px, 153px 111px;
-	animation-duration: 3.3s;
-	animation-delay: -1.6s;
+	animation-duration: 0.8s;
+	animation-delay: -0.4s;
 }
 @keyframes star-twinkle
 {
