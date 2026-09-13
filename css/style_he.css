@@ -170,14 +170,6 @@ a:hover
 	font-size: 12px;
 }
 
-.search_google
-{
-	background-image: url('../gif/google.gif');
-	background-size: 50px 20px;
-	background-repeat: no-repeat;
-	background-position: right;
-}
-
 /* Force light palette for browsers that ignore color-scheme (e.g. Samsung Internet Smart Dark Mode) */
 @media (prefers-color-scheme: dark) {
 	body {

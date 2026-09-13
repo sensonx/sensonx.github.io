@@ -259,10 +259,3 @@ a:hover
 	color: #FF0000;
 	font-size: 12px;
 }
-
-.search_google
-{
-	background-image: url('../gif/google.gif');
-	background-size: 50px 20px;
-	background-repeat: no-repeat;
-}

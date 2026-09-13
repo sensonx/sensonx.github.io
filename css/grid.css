@@ -279,7 +279,7 @@ a:active .basad-text {
     margin: 0 calc(50% - 185px) 0 auto;
 }
 .gbook-form input#hcb_form_name {
-    width: 190px !important;
+    width: 197px !important;
 }
 .gbook-form textarea#hcb_form_content {
     width: 100% !important;
@@ -431,7 +431,7 @@ a:active .basad-text {
 }
 
 .copyright {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .rights-link {
     font-size: 11px;
@@ -524,9 +524,19 @@ a:active .basad-text {
 #topBtn:hover { opacity: 1; }
 
 /* -- Sidebar search form ------------------------------------ */
-.search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 2px; }
-.search-input { width: 150px; font-size: 11px; padding: 2px 4px; border: 1px solid #999; }
-.search-btn { font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; background: #f0f0f0; }
+.search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 0; }
+.search-input {
+    width: 150px; height: 21px; box-sizing: border-box;
+    font-size: 11px; padding: 1px 2px; border: 1px solid #999;
+    /* no placeholder text (see sidebar-copyright.ejs, aria-label carries the label instead) —
+       same Google logo size/position as the index pages' own search box (style_index.css .search_google) */
+    background-image: url('../gif/google.gif');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-position: left top;
+    background-size: 50px 20px;
+}
+.search-btn { height: 21px; box-sizing: border-box; font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; border-left: none; background: #f0f0f0; }
 
 /* -- Keyboard focus: visible outline on interactive elements -- */
 .search-input:focus-visible,

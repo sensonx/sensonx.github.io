@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/png/apple-touch-icon.png" />
-    <link rel='stylesheet' type='text/css' href='css/style_index.css?v=05174063'/>
+    <link rel='stylesheet' type='text/css' href='css/style_index.css?v=82252340'/>
     <title>Тьмы ли сияние... (S-on Kritchker © project) | Кричкер Семён: тексты, стихи, песни, аккорды...</title>
     <meta name="description" content="Семён Кричкер, проект 'Тьмы ли сияние...' - тексты стихов и песен (ищу единомышленников для написания музыки и создания песен на основе моих работ); Senson S.Kritchker, 'Sheen of the Dark' - poems &amp; songs to discuss &amp; implement with readers or redactor and interested persons; TAGS: текст, стих, стихотворение, песня, музыка, аккорд, senson, kritchker, lyrics, poem, song, music, accord"/>
     <meta name="keywords" content="текст, стих, стихотворение, песня, музыка, аккорд, тьма ,сияние, Кричкер, Семен, Семён, lyrics, poem, song, music, literary-work, gitar, accord, senson, kritchker, krichker, senson s., sheen, dark"/>
@@ -40,26 +40,6 @@
 	</script>
 </head>
 <body marginwidth=36 marginheight=0>
-
-<script language="javascript">
-//========= Search functions ================
-var isClean;
-isClean = true;
-
-function open_url(id) {
-	url = document.getElementById(id).value;
-	url = "http://www.google.com/webhp?hl=ru#sclient=psy-ab&hl=ru&site=webhp&source=hp&q=" + url + "+site:sensonx.github.io&btnK=Google+Search"
-	window.open(url);
-}
-
-function clean(id) {
-	if (isClean) {
-	document.getElementById(id).value = "";
-	document.getElementById(id).className = "";
-	}
-	isClean = false;
-}
-</script>
 
 <center>
 <table id="idx-outer" border=0 width="707">
@@ -139,7 +119,7 @@ function clean(id) {
       <td width="41" height="10" class="idx-logo">
          <span class="basad-text">בס"ד</span>
 
-         <a href='page_other/slides.html'><img src="gif/logo.gif" alt="Слайды" border=0></a>
+         <a href='page_other/content.html'><img src="gif/logo.gif" alt="Слайды" border=0></a>
       </td>
    </tr>
 <tr>
@@ -161,16 +141,50 @@ function clean(id) {
    </td>
 </tr>
 <tr> 
-  <td colspan="2" align="rigth" class="idx-search">
-      <!-- Google Search -->
-	  <input type="text" class="search_google" id="search" value="" onclick="clean('search')" onkeydown="if(event.key==='Enter') open_url('search')" title="Поиск по сайту с Google™" autocomplete="on"/>
-	  <input type="button" style="font-weight:bold;" value="&#128269;" onclick="open_url('search')" title="Поиск по сайту с Google™"/>
-      <!-- /Google Search -->
-      <!-- Yandex.API.Blog -->
-      <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script> 
-      <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" 
-      data-yashareQuickServices="facebook,twitter,friendfeed,lj,liveinternet,gbuzz,greader,blogger,linkedin,myspace,yaru,yazakladki,vkontakte,odnoklassniki,moimir,moikrug"></div> 
-      <!-- /Yandex.API.Blog -->
+  <td colspan="2" class="idx-search">
+      <div class="idx-search-line">
+         <form class="search-form" onsubmit="window.open('https://www.google.com/search?q='+encodeURIComponent(this.q.value)+'+site:sensonx.github.io','_blank');return false;">
+    <input name="q" type="text" class="search-input" aria-label="Поиск по сайту с Google™" autocomplete="off" oninput="this.style.backgroundImage = this.value ? 'none' : ''">
+    <button type="submit" class="search-btn" aria-label="Поиск по сайту с Google™">&#128269;</button>
+</form>
+
+         <div class="social-share">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsensonx.github.io%2F" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#1877F2"/><text x="16" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fff">f</text></svg>
+    </a>
+    <a href="https://wa.me/?text=%D0%A2%D1%8C%D0%BC%D1%8B%20%D0%BB%D0%B8%20%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5...%20%E2%9C%A6%20%D0%9A%D1%80%D0%B8%D1%87%D0%BA%D0%B5%D1%80%20%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%20%C2%A9%20S-on%20Kritchker%20https%3A%2F%2Fsensonx.github.io%2F" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#25D366"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">WA</text></svg>
+    </a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#E1306C"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">IG</text></svg>
+    </a>
+    <a href="https://www.youtube.com/@senszon-e" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#FF0000"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">YT</text></svg>
+    </a>
+    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#000"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">TT</text></svg>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsensonx.github.io%2F&amp;text=%D0%A2%D1%8C%D0%BC%D1%8B%20%D0%BB%D0%B8%20%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5...%20%E2%9C%A6%20%D0%9A%D1%80%D0%B8%D1%87%D0%BA%D0%B5%D1%80%20%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%20%C2%A9%20S-on%20Kritchker" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X (Twitter)">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#000"/><text x="16" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff">X</text></svg>
+    </a>
+    <a href="https://t.me/share/url?url=https%3A%2F%2Fsensonx.github.io%2F&amp;text=%D0%A2%D1%8C%D0%BC%D1%8B%20%D0%BB%D0%B8%20%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5...%20%E2%9C%A6%20%D0%9A%D1%80%D0%B8%D1%87%D0%BA%D0%B5%D1%80%20%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%20%C2%A9%20S-on%20Kritchker" target="_blank" rel="noopener noreferrer" title="Telegram" aria-label="Telegram">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#26A5E4"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">TG</text></svg>
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsensonx.github.io%2F" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#0A66C2"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">in</text></svg>
+    </a>
+    <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" title="Spotify" aria-label="Spotify">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#1DB954"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">SP</text></svg>
+    </a>
+    <a href="https://vk.com/share.php?url=https%3A%2F%2Fsensonx.github.io%2F&amp;title=%D0%A2%D1%8C%D0%BC%D1%8B%20%D0%BB%D0%B8%20%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5...%20%E2%9C%A6%20%D0%9A%D1%80%D0%B8%D1%87%D0%BA%D0%B5%D1%80%20%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%20%C2%A9%20S-on%20Kritchker" target="_blank" rel="noopener noreferrer" title="VKontakte" aria-label="VKontakte">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#0077FF"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">VK</text></svg>
+    </a>
+    <a href="https://connect.ok.ru/offer?url=https%3A%2F%2Fsensonx.github.io%2F&amp;title=%D0%A2%D1%8C%D0%BC%D1%8B%20%D0%BB%D0%B8%20%D1%81%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5...%20%E2%9C%A6%20%D0%9A%D1%80%D0%B8%D1%87%D0%BA%D0%B5%D1%80%20%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%20%C2%A9%20S-on%20Kritchker" target="_blank" rel="noopener noreferrer" title="Odnoklassniki" aria-label="Odnoklassniki">
+        <svg viewBox="0 0 32 32" width="23" height="23" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#EE8208"/><text x="16" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">OK</text></svg>
+    </a>
+</div>
+
+      </div>
    </td> 
 </tr>
 <tr>
