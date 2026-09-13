@@ -357,17 +357,42 @@ a:active .basad-text {
     /* LEFT/RIGHT td transparent → idx-quote div + idx-inner table become direct grid items */
     .idx-left { display: contents !important; }
 
-    /* Grid placement: quote+logo share row 1, rest span both columns */
+    /* Grid placement: quote+logo share row 1; ninja image is a tall row-2
+       "background" that links/search/separator/copyright overlay on top of
+       (same grid-row as the image, stacked via z-index — no bg box behind
+       the overlaid text, empty space between them lets clicks fall through
+       to the image's own link via pointer-events) */
     .idx-quote     { grid-column: 1; grid-row: 1; align-self: start; }
     .idx-logo      { grid-column: 2; grid-row: 1; width: auto !important; height: auto !important; align-self: start; padding-left: 8px; text-align: center; }
-    .idx-ninja     { grid-column: 1 / 3; grid-row: 2; width: 100%; }
-    .idx-inner     { grid-column: 1 / 3; grid-row: 3; width: 100%; }
+    .idx-ninja     {
+        grid-column: 1 / 3; grid-row: 2; height: auto !important; text-align: center; z-index: 0;
+        /* bleed past body's 6px padding so the image reaches almost edge-to-edge */
+        width: calc(100% + 12px); margin-left: -6px; margin-right: -6px;
+    }
+    .idx-ninja img { width: 100%; height: auto; } /* stretch to fill the bleed width, not just its natural size */
     .idx-spacer    { display: none !important; }
-    .idx-hr, .idx-share, .idx-search, .idx-copyright { grid-column: 1 / 3; grid-row: 4; width: 100%; }
 
-    /* Hide icons; flatten inner links table into a vertical list */
+    .idx-inner, .idx-hr, .idx-share, .idx-search, .idx-copyright {
+        grid-column: 1 / 3; grid-row: 2; width: 100%;
+        align-self: start; position: relative; z-index: 2;
+        pointer-events: none; /* only real links/inputs inside re-enable clicks */
+    }
+    .idx-inner a, .idx-hr a, .idx-share a, .idx-search a, .idx-search input, .idx-search button, .idx-copyright a {
+        pointer-events: auto;
+    }
+    .idx-inner     { top: 4%; }
+    .idx-share     { top: 81%; } /* HE only: yashare icons live in their own row, separate from idx-search */
+    .idx-search    { top: 89%; }
+    .idx-hr        { top: 100%; } /* right at the image's bottom edge, not overlapping the artwork */
+    .idx-copyright { top: 103%; }
+
+    /* Hide icons; flatten inner links table into a vertical list; shadow for legibility over the image */
     .idx-inner .idx-icon { display: none !important; }  /* higher specificity than .idx-inner td */
-    .idx-inner          { display: block !important; }
+    .idx-inner          { display: block !important; margin-top: 4px; } /* was 24px — nudges "Автор" up, closer to the quote */
     .idx-inner tr       { display: block !important; width: 100% !important; }
     .idx-inner td       { display: block !important; width: auto !important; height: auto !important; }
+    .idx-inner tr:nth-of-type(2) .content_Link, .idx-inner tr:nth-of-type(2) .content_Link_H {
+        padding-top: 10px; /* matches link_EN/link_HE's own padding-top, so Тексты-English gap === Автор-Тексты gap */
+    }
+    .idx-inner a, .idx-copyright, .idx-copyright a { text-shadow: 0 1px 3px #000, 0 0 6px #000; }
 }
