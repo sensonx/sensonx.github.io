@@ -184,7 +184,7 @@ a:hover .scroll-icon
 }
 
 /* Shared search-form solution (same as grid.css, used on every other page type) */
-.search-form { display: flex; align-items: center; gap: 0; }
+.search-form { display: flex; align-items: center; gap: 0; margin-bottom: 0; }
 .search-input {
     width: 150px; height: 21px; box-sizing: border-box;
     font-size: 11px; padding: 1px 2px; border: 1px solid #999;
@@ -199,8 +199,8 @@ a:hover .scroll-icon
 .search-btn:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
 
 /* Search block + social-share icons: same line, opposite ends */
-.idx-search-line { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
-.social-share { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.idx-search-line { display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.social-share { display: flex; align-items: flex-end; flex-wrap: wrap; gap: 6px; }
 .social-share a { display: inline-flex; opacity: 0.85; transition: opacity 0.15s; }
 .social-share a:hover,
 .social-share a:focus-visible { opacity: 1; }
