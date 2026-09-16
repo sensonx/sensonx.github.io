@@ -305,6 +305,13 @@ a:hover .scroll-icon
 }
 #topBtn:hover { opacity: 1; }
 
+/* bare "|" separator between the two rights-link anchors has no color of its
+   own otherwise — inherits default text color (black), invisible against the
+   dark body background; match it to the red "Copyright" text above it */
+.idx-copyright {
+    color: #ff0000;
+}
+
 .idx-copyright .rights-link {
     font-size: 11px;
     opacity: 0.7;
