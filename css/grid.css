@@ -45,6 +45,12 @@ body {
     font-weight: bold;
     padding: 5px 0;
 }
+.he-breadcrumbs {
+    width: 300px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    text-align: right;
+}
 
 /* Logo is now inside .grid-content-header (no separate .grid-logo cell) */
 
@@ -577,6 +583,7 @@ a:active .basad-text {
         padding-top: 0;
         overflow-wrap: break-word;
     }
+    .he-breadcrumbs { width: auto; padding-right: 0; }
     .grid-sidebar-col { display: block; padding-right: 0; }
 
     /* Visual order: content first, sidebars after bottom nav */
