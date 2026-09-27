@@ -530,18 +530,18 @@ a:active .basad-text {
 #topBtn:hover { opacity: 1; }
 
 /* -- Sidebar search form ------------------------------------ */
-.search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 0; }
+.search-form { position: relative; margin-bottom: 8px; display: flex; align-items: center; gap: 0; }
 .search-input {
     width: 150px; height: 21px; box-sizing: border-box;
-    font-size: 11px; padding: 1px 2px; border: 1px solid #999;
-    /* no placeholder text (see sidebar-copyright.ejs, aria-label carries the label instead) —
-       same Google logo size/position as the index pages' own search box (style_index.css .search_google) */
-    background-image: url('../gif/google.gif');
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-position: left top;
-    background-size: 50px 20px;
+    font-size: 14px; padding: 1px 2px; border: 1px solid #999;
 }
+.google-mark { position: absolute; top: 0; left: 2px; z-index: 1; display: flex; align-items: center; height: 21px; font: 700 14px Georgia, "Times New Roman", serif; line-height: 1; white-space: nowrap; pointer-events: none; }
+.google-mark .google-blue { color: #4285f4; }
+.google-mark .google-red { color: #ea4335; }
+.google-mark .google-yellow { color: #fbbc05; }
+.google-mark .google-green { color: #34a853; }
+.search-input:focus + .google-mark,
+.search-form.has-query .google-mark { display: none; }
 .search-btn { height: 21px; box-sizing: border-box; font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; border-left: none; background: #f0f0f0; }
 
 /* -- Keyboard focus: visible outline on interactive elements -- */

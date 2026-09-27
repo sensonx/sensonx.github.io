@@ -184,16 +184,18 @@ a:hover .scroll-icon
 }
 
 /* Shared search-form solution (same as grid.css, used on every other page type) */
-.search-form { display: flex; align-items: center; gap: 0; margin-bottom: 0; }
+.search-form { position: relative; display: flex; align-items: center; gap: 0; margin-bottom: 0; }
 .search-input {
     width: 150px; height: 21px; box-sizing: border-box;
-    font-size: 11px; padding: 1px 2px; border: 1px solid #999;
-    background-image: url('../gif/google.gif');
-    background-repeat: no-repeat;
-    background-origin: border-box;
-    background-position: left top;
-    background-size: 50px 20px;
+	font-size: 14px; padding: 1px 2px; border: 1px solid #999;
 }
+.google-mark { position: absolute; top: 0; left: 2px; z-index: 1; display: flex; align-items: center; height: 21px; font: 700 14px Georgia, "Times New Roman", serif; line-height: 1; white-space: nowrap; pointer-events: none; }
+.google-mark .google-blue { color: #4285f4; }
+.google-mark .google-red { color: #ea4335; }
+.google-mark .google-yellow { color: #fbbc05; }
+.google-mark .google-green { color: #34a853; }
+.search-input:focus + .google-mark,
+.search-form.has-query .google-mark { display: none; }
 .search-btn { height: 21px; box-sizing: border-box; font-size: 13px; padding: 1px 5px; cursor: pointer; border: 1px solid #999; border-left: none; background: #f0f0f0; }
 .search-input:focus-visible,
 .search-btn:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
