@@ -530,7 +530,8 @@ a:active .basad-text {
 #topBtn:hover { opacity: 1; }
 
 /* -- Sidebar search form ------------------------------------ */
-.search-form { position: relative; margin-bottom: 8px; display: flex; align-items: center; gap: 0; }
+.search-form { margin-bottom: 8px; display: flex; align-items: center; gap: 0; }
+.search-input-wrap { position: relative; display: block; flex: 0 0 150px; width: 150px; height: 21px; }
 .search-input {
     width: 150px; height: 21px; box-sizing: border-box;
     font-size: 14px; padding: 1px 2px; border: 1px solid #999;

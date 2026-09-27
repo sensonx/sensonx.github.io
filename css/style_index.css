@@ -184,7 +184,8 @@ a:hover .scroll-icon
 }
 
 /* Shared search-form solution (same as grid.css, used on every other page type) */
-.search-form { position: relative; display: flex; align-items: center; gap: 0; margin-bottom: 0; }
+.search-form { display: flex; align-items: center; gap: 0; margin-bottom: 0; }
+.search-input-wrap { position: relative; display: block; flex: 0 0 150px; width: 150px; height: 21px; }
 .search-input {
     width: 150px; height: 21px; box-sizing: border-box;
 	font-size: 14px; padding: 1px 2px; border: 1px solid #999;
