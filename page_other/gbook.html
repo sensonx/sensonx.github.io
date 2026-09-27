@@ -131,6 +131,30 @@ hcb_user = {
 </script>
 <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
 <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+<script>
+(function () {
+    const commentBox = document.getElementById('HCB_comment_box');
+    if (!commentBox) return;
+    const insertOldGuestbookLink = () => {
+        const homeDesc = commentBox.querySelector('.home-desc');
+        if (!homeDesc || homeDesc.querySelector('.old-guestbook-link')) return;
+        const link = document.createElement('a');
+        link.href = 'https://ventl.ru/senson-gb';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.className = 'old-guestbook-link';
+        link.style.setProperty('color', 'black', 'important');
+        link.style.fontSize = '16px';
+        link.textContent = 'Old GuestBook';
+        homeDesc.insertBefore(link, homeDesc.firstChild);
+        homeDesc.insertBefore(document.createTextNode(' - '), link.nextSibling);
+        observer.disconnect();
+    };
+    const observer = new MutationObserver(insertOldGuestbookLink);
+    observer.observe(commentBox, { childList: true, subtree: true });
+    insertOldGuestbookLink();
+})();
+</script>
 <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24Zpngb6kHdVJ86VzXwudId1"+"&opts=16798&num=10&ts=1788787646363");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script></div>
     </td>
   </tr>
