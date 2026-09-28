@@ -298,7 +298,7 @@ a:active .basad-text {
     margin-right: 0 !important;
     float: none !important;
 }
-.gbook-form .home-desc {
+.gbook-form #hcb_form > .home-desc {
     width: calc(100% + 171px);
     max-width: none;
     margin-left: -38px;
@@ -308,8 +308,15 @@ a:active .basad-text {
     justify-content: space-between;
     color: #999;
 }
-.gbook-form .hcb-attribution-text {
+.gbook-form #hcb_form > .home-desc .hcb-attribution-text {
     text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.gbook-form #hcb_form > .home-desc .hcb-attribution-text > .home-desc {
+    display: inline;
+    width: auto;
+    max-width: none;
 }
 
 /* gbook: align + size the nav/footer separator with the comment field beneath it
@@ -630,7 +637,13 @@ a:active .basad-text {
 
     /* gbook: keep the form and attribution row inside the narrow column */
     .gbook-form #hcb_form { max-width: 100%; margin: 0 auto; }
-    .gbook-form .home-desc { width: 100%; max-width: 100%; margin-left: 0; }
+    .gbook-form #hcb_form > .home-desc {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+    .gbook-form #hcb_form > .home-desc .hcb-attribution-text { margin-left: auto; }
 
     /* Poem text: wrap long lines instead of scrolling horizontally */
     pre {
