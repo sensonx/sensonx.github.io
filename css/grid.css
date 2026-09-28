@@ -299,6 +299,12 @@ a:active .basad-text {
     float: none !important;
 }
 .gbook-form .home-desc {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    color: #999;
+}
+.gbook-form .hcb-attribution-text {
     text-align: right;
 }
 
