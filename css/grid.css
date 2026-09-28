@@ -299,6 +299,10 @@ a:active .basad-text {
     float: none !important;
 }
 .gbook-form .home-desc {
+    width: calc(100% + 171px);
+    max-width: none;
+    margin-left: -38px;
+    box-sizing: border-box;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -624,8 +628,9 @@ a:active .basad-text {
     .grid-sidebar-review { font-size: 13px; }  /* covers .links children too */
     .review              { font-size: 13px; }
 
-    /* gbook: drop the fixed left-growth margin, just center within the narrow column */
+    /* gbook: keep the form and attribution row inside the narrow column */
     .gbook-form #hcb_form { max-width: 100%; margin: 0 auto; }
+    .gbook-form .home-desc { width: 100%; max-width: 100%; margin-left: 0; }
 
     /* Poem text: wrap long lines instead of scrolling horizontally */
     pre {
