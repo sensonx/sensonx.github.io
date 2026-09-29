@@ -99,6 +99,66 @@ body {
 .header-logo img {
     display: block;
 }
+.draft-stamp {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    flex: 0 0 154px;
+    width: 154px;
+    min-height: 44px;
+    margin: 0;
+    padding: 8px 5px 5px;
+    border: 4px solid rgba(179, 0, 0, 0.62);
+    color: rgba(179, 0, 0, 0.68);
+    font-family: "Danger Neue Free", "Arial Narrow", Impact, sans-serif;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+    transform: rotate(-3deg);
+    opacity: 0.82;
+    filter: saturate(0.72) blur(0.2px);
+}
+.draft-stamp > span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    white-space: nowrap;
+    transform: scaleX(1.04);
+}
+.draft-stamp::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid currentColor;
+    z-index: 1;
+    pointer-events: none;
+}
+.draft-stamp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.42;
+    z-index: 3;
+    background-image: repeating-radial-gradient(ellipse at 20% 25%, rgba(255,255,255,0.8) 0 1px, transparent 1px 4px);
+    mix-blend-mode: screen;
+}
+.draft-author-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+.draft-author-spacer {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.draft-author-row .author-block {
+    flex: 0 1 auto;
+    margin-top: 0;
+    text-align: left;
+}
 /* Text-based "basad1.jpg" replacement — same width as logo.gif, fused with it (no gap/border) */
 .basad-text,
 a:link .basad-text,
@@ -619,6 +679,21 @@ a:active .basad-text {
     .grid-content-header {
         flex-wrap: wrap;
         gap: 6px;
+    }
+
+    .draft-stamp {
+        flex-basis: 154px;
+        width: 154px;
+        font-size: 19px;
+    }
+
+    .draft-author-row {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .draft-author-spacer {
+        display: none;
     }
 
     /* Navigation: allow title to wrap if needed on narrow screens */
