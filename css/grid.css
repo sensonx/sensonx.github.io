@@ -22,10 +22,9 @@ body {
 /* Main layout grid structure
    Row 1: breadcrumbs (full width)
    Row 2: [empty col1] [title+date col2] [logo col3]
-   Row 3: [TOC col1]       [nav-top col2]         — cycle split
-   Row 4: [review col1]    [HR+intro+body col2]    — cycle split
-   Row 5: [copyright col1] [author+nav-bottom col2]— cycle split
-   (lyric pages use grid-sidebar-left + grid-content-body in row 3 only)
+   Row 3: TOC + top navigation
+   Row 4: connections + main content
+   Row 5: search/copyright + bottom navigation
 */
 .layout-grid {
     display: grid;
@@ -61,7 +60,7 @@ body {
     padding-right: 20px;
 }
 
-/* Cycle page sidebar — split into 3 rows */
+/* Sidebar regions share content-row heights to continue the right-side dividers */
 .grid-sidebar-toc        { grid-column: 1/2; grid-row: 3; padding-right: 20px; padding-top: 14px; }
 .grid-sidebar-review     { grid-column: 1/2; grid-row: 4; padding-right: 20px;
                            font-family: "Times New Roman", serif; font-size: 16px;
@@ -197,6 +196,13 @@ a:active .basad-text {
 .grid-content-nav    { grid-column: 2/3; grid-row: 3; padding: 14px 0 0; width: 650px; box-sizing: border-box; }
 .grid-content-main   { grid-column: 2/3; grid-row: 4; padding: 0; width: 650px; box-sizing: border-box; }
 .grid-content-footer { grid-column: 2/3; grid-row: 5; padding: 0; width: 650px; box-sizing: border-box; }
+
+.lyric-intro {
+    display: flex;
+    margin-top: -10px;
+}
+.lyric-intro > span:first-child { flex: 0 0 40%; }
+.lyric-intro > span:last-child { flex: 0 0 60%; }
 
 /* Remove browser default bottom margin from last element before the separator */
 .txt_intro > *:last-child,
@@ -706,6 +712,7 @@ a:active .basad-text {
     body { background-attachment: scroll; }
 
     /* Reduce font sizes that are too large at full mobile width */
+    .lyric-intro { margin-top: -6px; }
     .txt_intro           { font-size: 14px; }
     .grid-sidebar-review { font-size: 13px; }  /* covers .links children too */
     .review              { font-size: 13px; }
