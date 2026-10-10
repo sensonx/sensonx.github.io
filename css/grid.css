@@ -583,6 +583,113 @@ a:active .basad-text {
     font-family: inherit;
 }
 
+.content-page .toc-typewriter {
+    display: inline-block;
+    position: relative;
+    width: 85px;
+    height: 40px;
+    vertical-align: baseline;
+}
+.content-page .toc-typewriter-carriage {
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    width: 58px;
+    height: 6px;
+    border: 1px solid #161616;
+    border-radius: 3px;
+    background: #727b78;
+    animation: toc-typewriter-carriage 3.6s steps(6, end) infinite;
+}
+.content-page .toc-typewriter-carriage::before,
+.content-page .toc-typewriter-carriage::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 5px;
+    height: 8px;
+    border-radius: 2px;
+    background: #202725;
+}
+.content-page .toc-typewriter-carriage::before { left: -5px; }
+.content-page .toc-typewriter-carriage::after { right: -5px; }
+.content-page .toc-typewriter-paper {
+    position: absolute;
+    bottom: 4px;
+    left: 12px;
+    width: 32px;
+    height: 17px;
+    border: 1px solid #a0aaa6;
+    border-radius: 2px 2px 0 0;
+    background: #fff;
+}
+.content-page .toc-typewriter-paper::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+    height: 7px;
+    background: repeating-linear-gradient(to bottom, #64716b 0 1px, transparent 1px 3px);
+    clip-path: inset(0 100% 0 0);
+    animation: toc-typewriter-ink 3.6s steps(6, end) infinite;
+}
+.content-page .toc-typewriter-body {
+    position: absolute;
+    left: 14px;
+    top: 21px;
+    width: 55px;
+    height: 15px;
+    border: 1px solid #111b17;
+    border-radius: 4px 4px 3px 3px;
+    background: linear-gradient(#627d6e 0 4px, #294c3b 4px 12px, #152e22 12px);
+    box-shadow: 0 2px 0 #111b17;
+    transform: perspective(60px) rotateX(12deg);
+}
+.content-page .toc-typewriter-keys {
+    position: absolute;
+    left: 23px;
+    top: 26px;
+    width: 39px;
+    height: 8px;
+    background: radial-gradient(circle, #f0f3ef 0 2px, #16231c 2px 3px, transparent 3px) 0 0 / 8px 8px repeat;
+}
+.content-page .toc-typewriter-keys::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #16231c;
+    animation: toc-typewriter-key 0.6s steps(1, end) infinite;
+}
+@keyframes toc-typewriter-carriage {
+    0%, 8% { transform: translateX(5px); }
+    88% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+@keyframes toc-typewriter-ink {
+    0%, 8% { clip-path: inset(0 100% 0 0); }
+    88%, 99% { clip-path: inset(0 0 0 0); }
+    100% { clip-path: inset(0 100% 0 0); }
+}
+@keyframes toc-typewriter-key {
+    0%, 100% { transform: translate(0, 1px); }
+    25% { transform: translate(16px, 0); }
+    50% { transform: translate(8px, 1px); }
+    75% { transform: translate(24px, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .content-page .toc-typewriter-carriage,
+    .content-page .toc-typewriter-paper::after,
+    .content-page .toc-typewriter-keys::after {
+        animation: none;
+    }
+    .content-page .toc-typewriter-paper::after { clip-path: none; }
+}
+
 .content-width {
     width: 100%;
 }
