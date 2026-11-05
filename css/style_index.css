@@ -375,11 +375,8 @@ a:active .basad-text {
     /* LEFT/RIGHT td transparent → idx-quote div + idx-inner table become direct grid items */
     .idx-left { display: contents !important; }
 
-    /* Grid placement: quote+logo share row 1; ninja image is a tall row-2
-       "background" that links/search/separator/copyright overlay on top of
-       (same grid-row as the image, stacked via z-index — no bg box behind
-       the overlaid text, empty space between them lets clicks fall through
-       to the image's own link via pointer-events) */
+	 /* Quote+logo share row 1; links/search/separator overlay the hero in row 2.
+		 Copyright stays in row 3 so it cannot cover the Author/Texts links. */
     .idx-quote     { grid-column: 1; grid-row: 1; align-self: start; }
     .idx-logo      { grid-column: 2; grid-row: 1; width: auto !important; height: auto !important; align-self: start; padding-left: 8px; text-align: center; }
     .idx-ninja     {
@@ -401,7 +398,7 @@ a:active .basad-text {
     .idx-inner     { top: 4%; }
     .idx-search    { top: 85%; } /* search-form + social-share now share one row (was 2 separate rows on HE) */
     .idx-hr        { top: 100%; } /* right at the image's bottom edge, not overlapping the artwork */
-    .idx-copyright { top: 103%; }
+    .idx-copyright { grid-row: 3; top: 0; }
 
     /* Hide icons; flatten inner links table into a vertical list; shadow for legibility over the image */
     .idx-inner .idx-icon { display: none !important; }  /* higher specificity than .idx-inner td */
