@@ -11,7 +11,7 @@ body
 
 /* Default content-page background (lyric/cycle/accord/draft/word/review/rights
    pages) — scoped to :not(.mail-bg) so it can NEVER bleed onto mail pages
-   (page_mail/, .mail-bg in grid.css), which have their own fully independent
+   (page/mail/, .mail-bg in grid.css), which have their own fully independent
    background rules. Editing one is guaranteed not to affect the other. */
 body:not(.mail-bg)
 {
