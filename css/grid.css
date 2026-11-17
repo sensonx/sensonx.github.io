@@ -325,7 +325,7 @@ a:active .basad-text {
         #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
 }
 
-/* Wider variant — page/other/gbook.html only, sized close to the guestbook form's width */
+/* Wider variant — page/gbook.html only, sized close to the guestbook form's width */
 .separator-line-wide {
     display: inline-block;
     vertical-align: middle;
@@ -339,7 +339,7 @@ a:active .basad-text {
         #ff0000 75%, #ff2100 80%, #ff9600 85%, #ffed00 90%, #ffff39 95%, #fffffe 100%);
 }
 
-/* HTML Comment Box guestbook widget (page/other/gbook.html) — neutralize the
+/* HTML Comment Box guestbook widget (page/gbook.html) — neutralize the
    ambient page font-color/italic it otherwise inherits, hide the RSS icon,
    the moderator-only login icon, the widget's own heading (duplicates the
    page's own H1 title), and its post-submit "thank you" confirmation text
