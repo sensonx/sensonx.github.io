@@ -11,6 +11,18 @@ body
 	margin-top: 0;
 	font-family: Tahoma,Verdana;
 }
+.skip-link {
+	position: fixed;
+	top: 8px;
+	left: 8px;
+	z-index: 1000;
+	padding: 8px 12px;
+	color: #fff !important;
+	background: #111;
+	transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; outline: 2px solid #fff; outline-offset: 2px; }
+#main-content:focus { outline: none; }
 
 a:link
 {
@@ -70,6 +82,11 @@ a:hover
 {
 	margin-top: 24px;
 }
+.idx-nav-link { display: grid; grid-template-columns: 38px auto; align-items: end; }
+.idx-inner-he .idx-nav-link { grid-template-columns: auto 38px; }
+.idx-nav-link > span:not(.idx-icon) { display: block; color: inherit; }
+.idx-nav-link .idx-icon { align-self: center; }
+.idx-nav-link .idx-icon-letter { align-self: end; }
 
 .lang-letter
 {
@@ -120,14 +137,10 @@ a:hover .scroll-icon
 	filter: sepia(0.5) saturate(3) hue-rotate(-20deg) brightness(1.1);
 }
 
-/* Icon + link text act as one hover unit: hovering either side lights up both */
-.idx-inner tr:has(> td.idx-icon a:hover) > td:not(.idx-icon) a
-{
-	color: #15ff8a;
-}
-.idx-inner tr:has(> td:not(.idx-icon) a:hover) .feather-icon,
-.idx-inner tr:has(> td:not(.idx-icon) a:hover) .scroll-icon,
-.idx-inner tr:has(> td:not(.idx-icon) a:hover) .lang-letter
+/* Icon + link text act as one hover unit. */
+.idx-nav-link:hover .feather-icon,
+.idx-nav-link:hover .scroll-icon,
+.idx-nav-link:hover .lang-letter
 {
 	filter: sepia(0.5) saturate(3) hue-rotate(-20deg) brightness(1.1);
 }
@@ -208,6 +221,7 @@ a:hover .scroll-icon
 .social-share a:hover,
 .social-share a:focus-visible { opacity: 1; }
 .social-share a:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
+.idx-nav-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
 /*----- Hebrew Support -- */
 
@@ -402,6 +416,7 @@ a:active .basad-text {
 
     /* Hide icons; flatten inner links table into a vertical list; shadow for legibility over the image */
     .idx-inner .idx-icon { display: none !important; }  /* higher specificity than .idx-inner td */
+    .idx-nav-link, .idx-inner-he .idx-nav-link { display: block; }
     .idx-inner          { display: block !important; margin-top: 4px; } /* was 24px — nudges "Автор" up, closer to the quote */
     .idx-inner tr       { display: block !important; width: 100% !important; }
     .idx-inner td       { display: block !important; width: auto !important; height: auto !important; }

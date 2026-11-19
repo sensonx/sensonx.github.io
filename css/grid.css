@@ -18,6 +18,18 @@ body {
     margin: 0;
     padding: 10px;
 }
+a.skip-link:link, a.skip-link:visited {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 1000;
+    padding: 8px 12px;
+    color: #fff;
+    background: #111;
+    transform: translateY(-200%);
+}
+a.skip-link:focus { transform: none; outline: 2px solid #fff; outline-offset: 2px; }
+#main-content:focus { outline: none; }
 
 /* Main layout grid structure
    Row 1: breadcrumbs (full width)
@@ -263,6 +275,26 @@ a:active .basad-text {
 .list-link {
     font-weight: bold;
     text-decoration: none;
+}
+
+.sitemap-list {
+    margin-top: 1.5em;
+}
+.sitemap-row {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 1em;
+    padding: 2px 0;
+    font-style: normal;
+}
+.sitemap-name,
+.sitemap-filename {
+    min-width: 0;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+.sitemap-name {
+    font-weight: normal;
 }
 
 /* Decorative bullet dots — replaces gif/button.gif and gif/button0.gif raster icons.
@@ -802,6 +834,7 @@ a:active .basad-text {
     }
     .he-breadcrumbs { width: auto; padding-right: 0; }
     .grid-sidebar-col { display: block; padding-right: 0; }
+    .letter-box { box-sizing: border-box; }
 
     /* Visual order: content first, sidebars after bottom nav */
     .grid-breadcrumbs                          { order: 1; }
@@ -898,6 +931,7 @@ a:active .basad-text {
 /* ── Print ───────────────────────────────────────── */
 @media print {
     body { background: white !important; color: black !important; padding: 0; }
+    .skip-link,
     .grid-breadcrumbs,
     .grid-sidebar-toc,
     .grid-sidebar-review,
