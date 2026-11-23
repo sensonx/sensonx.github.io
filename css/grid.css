@@ -629,10 +629,24 @@ a:active .basad-text {
 .txt_intro td {
     padding: 4px 5px;
 }
+/* Purple intro blocks (cv, rangor) were Tahoma via a legacy inline face; kept here so the DB text carries no font face */
+.txt_intro font[color="800080"] {
+    font-family: Tahoma, Verdana;
+}
 
 /* Poem body: prevent casual drag-copy */
 .txt_body, .review-entry, .letter-box {
     user-select: none;
+}
+
+/* Poem <pre> blocks: Tahoma text; line-height and tab width match the previous monospace-strut rendering (21px RU/EN, 20px HE; tab = 8 monospace columns) */
+.txt_body pre {
+    font-family: Tahoma, Verdana;
+    line-height: 21px;
+    tab-size: 4.8em;
+}
+.txt_body pre[lang="HE"] {
+    line-height: 20px;
 }
 
 /* content.html: no italic, inherit body font (also covers HE Comic Sans override) */
