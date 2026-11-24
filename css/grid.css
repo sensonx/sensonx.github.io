@@ -402,6 +402,18 @@ a:active .basad-text {
 }
 
 /* .gbook-form: centers the form in the main block, sizes/aligns fields per mockup */
+.guestbook-privacy {
+    max-width: 465px;
+    margin: 0 calc(50% - 185px) 12px auto;
+    font: normal 13px/1.5 Tahoma, Verdana, sans-serif;
+    color: #fff;
+}
+.guestbook-privacy a { color: #aeeaff; text-decoration: underline; }
+.privacy-notice { line-height: 1.65; overflow-wrap: anywhere; }
+.privacy-notice section { text-align: left; }
+.privacy-notice section[dir="rtl"] { text-align: right; }
+.privacy-notice h2 { font-size: 18px; }
+
 /* grown 95px (half of name field's 190px width) to the left of the old centered
    370px box; right margin recreates that box's old right-edge position exactly */
 .gbook-form #hcb_form {
@@ -927,6 +939,7 @@ a:active .basad-text {
 
     /* gbook: keep the form and attribution row inside the narrow column */
     .gbook-form #hcb_form { max-width: 100%; margin: 0 auto; }
+    .guestbook-privacy { max-width: 100%; margin: 0 0 12px; }
     .gbook-form #hcb_form > .home-desc {
         width: 100%;
         max-width: 100%;
