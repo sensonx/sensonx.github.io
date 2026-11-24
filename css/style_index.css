@@ -409,6 +409,11 @@ a:active .basad-text {
         /* bleed past body's 6px padding so the image reaches almost edge-to-edge */
         width: calc(100% + 12px); margin-left: -6px; margin-right: -6px;
     }
+
+    @media (max-width: 360px) {
+        .idx-hr { transform: translateY(12px); }
+        .idx-copyright { margin-top: 18px; }
+    }
     .idx-ninja img { width: 100%; height: auto; } /* stretch to fill the bleed width, not just its natural size */
     .idx-spacer    { display: none !important; }
 
