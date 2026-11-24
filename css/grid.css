@@ -406,9 +406,10 @@ a:active .basad-text {
     max-width: 465px;
     margin: 0 calc(50% - 185px) 12px auto;
     font: normal 13px/1.5 Tahoma, Verdana, sans-serif;
-    color: #fff;
+    color: #999;
 }
-.guestbook-privacy a { color: #aeeaff; text-decoration: underline; }
+.guestbook-privacy a { color: #aeeaff; text-decoration: none; }
+.guestbook-privacy .comment-provider-link { color: #6ca2fd; }
 .privacy-notice { line-height: 1.65; overflow-wrap: anywhere; }
 .privacy-notice section { text-align: left; }
 .privacy-notice section[dir="rtl"] { text-align: right; }
@@ -823,6 +824,7 @@ a:active .basad-text {
 .search-input:focus-visible,
 .search-btn:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
 .layout-grid a:focus-visible { outline: 2px solid #666; outline-offset: 1px; }
+.chord-key-scroll:focus-visible { outline: 2px solid #666; outline-offset: -2px; }
 
 /* ── Mobile layout (≤768px) ──────────────────────── */
 @media (max-width: 768px) {
@@ -861,6 +863,46 @@ a:active .basad-text {
     .he-breadcrumbs { width: auto; padding-right: 0; }
     .grid-sidebar-col { display: block; padding-right: 0; }
     .letter-box { box-sizing: border-box; }
+    .chord-key-scroll {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .gbook-page .separator-line-wide {
+        width: calc(100% - 20px);
+        max-width: none;
+        margin-left: 10px;
+    }
+    .banners-page .txt_intro > table:last-child {
+        display: block;
+        max-width: 100%;
+    }
+    .banners-page .txt_intro > table:last-child tbody { display: block; }
+    .banners-page .txt_intro > table:last-child tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    .banners-page .txt_intro > table:last-child td { display: block; }
+    .banners-page .txt_intro > table:last-child td[width="5"] { display: none; }
+    .wrapping-cycle-list .list-row > span:first-child {
+        white-space: nowrap;
+        vertical-align: top;
+    }
+    .wrapping-cycle-list .list-link {
+        display: block;
+        width: max-content;
+        /* Leave room for a date even when a title would fill the screen. */
+        max-width: calc(100vw - 12px - 3em);
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+    .wrapping-cycle-list .list-date {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        vertical-align: top;
+        padding-top: 2px;
+    }
 
     /* Visual order: content first, sidebars after bottom nav */
     .grid-breadcrumbs                          { order: 1; }
