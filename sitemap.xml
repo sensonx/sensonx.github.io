@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sensonx.github.io/</loc></url>
-  <url><loc>https://sensonx.github.io/index_e.html</loc></url>
+  <url><loc>https://sensonx.github.io/index_e.html</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://sensonx.github.io/index_h.html</loc></url>
   <url><loc>https://sensonx.github.io/page/cycle/bbell.html</loc></url>
   <url><loc>https://sensonx.github.io/page/cycle/bbell_all.html</loc></url>
@@ -279,7 +279,7 @@
   <url><loc>https://sensonx.github.io/page/banners.html</loc></url>
   <url><loc>https://sensonx.github.io/page/content.html</loc></url>
   <url><loc>https://sensonx.github.io/page/cv.html</loc></url>
-  <url><loc>https://sensonx.github.io/page/cv_en.html</loc></url>
+  <url><loc>https://sensonx.github.io/page/cv_en.html</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://sensonx.github.io/page/cv_he.html</loc></url>
   <url><loc>https://sensonx.github.io/page/gbook.html</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://sensonx.github.io/page/privacy.html</loc><lastmod>2026-11-24</lastmod></url>
